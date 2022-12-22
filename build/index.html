@@ -1,63 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page"  lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <title>Круизы в Антарктику</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+      <!--Header-->
+    <header class="page__header main-header main-header--nojs main-header--nav-closed"><!--Для открытия меню используется класс main-header--nav-opened-->
+      <div class="main-header__inner-wrap container">
+        <div class="main-header__logo-toggle-wrap">
+          <a class="logo">
+            <img src="img/svg/iceberg-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">
+          </a>
+          <div class="main-header__toggle toggle"><!--Для открытия меню используется класс toggle--opened-->
+            <button class="header__toggle-button toggle-button" aria-label="Открытие-закрытие меню">
+              <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
+            </button>
           </div>
-        </section>
+        </div>
+        <!--Navigation-->
+        <nav class="main-header__navigation navigation container">
+          <div class="navigation__user-nav user-navigation">
+            <ul class="user-navigation__list">
+              <li class="user-navigation__item">
+                <a class="user-navigation__link">Преимущества</a>
+              </li>
+              <li class="user-navigation__item">
+                <a class="user-navigation__link">Направления</a>
+              </li>
+              <li class="user-navigation__item">
+                <a class="user-navigation__link">Ближайшие круизы</a>
+              </li>
+              <li class="user-navigation__item">
+                <a class="user-navigation__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="main-header__description">
+        <h1 class="main-header__title">Круизы в&nbsp;Антарктику</h1>
+        <p class="main-header__promo">Волшебный мир айсбергов и пингвинов</p>
+      </div>
+    </header>
+      <main>
+
+
       </main>
       <footer>
         <div class="container"></div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

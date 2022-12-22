@@ -1,0 +1,13 @@
+.toggle {
+  display: none;
+}
+
+.toggle--opened {
+  display: block;
+}
+
+@media (max-width: ($vp-768 - 1px)) {
+  .toggle {
+    display: block;
+  }
+}

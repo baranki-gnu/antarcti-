@@ -1,0 +1,29 @@
+.user-navigation__list {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  max-width: 1080px;
+  list-style-type: none;
+}
+
+.user-navigation__item {
+  margin-left: 33px;
+
+}
+
+.user-navigation__item a {
+  font-size: 16px;
+  line-height: 19.5px;
+  color: $color-alice-blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: ($vp-768 - 1px)) {
+  .user-navigation__list {
+    display: none;
+  }
+}

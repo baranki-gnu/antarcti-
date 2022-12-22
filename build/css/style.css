@@ -385,11 +385,35 @@ template {
 }
 
 @font-face {
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-family: "";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 *,
@@ -610,9 +634,12 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -754,6 +781,133 @@ button,
   pointer-events: auto;
 }
 
+.main-header {
+  width: 100%;
+  min-height: 638px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #f9fbfd;
+  background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat;
+}
+
+@supports (background: url("../img/background/central-background-desktop@1x.webp")) {
+  .main-header {
+    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat;
+  }
+}
+
+@supports (background: url("../img/background/central-background-desktop@2x.webp")) {
+  .main-header {
+    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat;
+  }
+}
+
+.main-header__inner-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-header__navigation {
+  margin-bottom: 210px;
+}
+
+.main-header__description {
+  min-width: 823px;
+  max-width: 973px;
+  padding-left: 173px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-header__description h1 {
+  width: 100%;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 66px;
+  color: #f9fbfd;
+  text-align: left;
+}
+
+.main-header__description p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.5px;
+  color: #f9fbfd;
+  text-align: left;
+}
+
+.user-navigation__list {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 1080px;
+  list-style-type: none;
+}
+
+.user-navigation__item {
+  margin-left: 33px;
+}
+
+.user-navigation__item a {
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #f9fbfd;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif, "Arial";
+  font-size: 16px;
+  line-height: 24px;
+  color: #011c40;
+  background-color: #f9fbfd;
+}
+
+.page header {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle--opened {
+  display: block;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -795,21 +949,41 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    max-width: 1023px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .main-header__description {
+    min-width: 680px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .main-header__description h1 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .main-header__description p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .logo {
+    width: 38px;
+    height: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    max-width: 767px;
+    min-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .modal__wrapper {
@@ -824,10 +998,53 @@ button,
   .modal--fit-content .modal__content {
     width: 100%;
   }
+
+  .main-header__description {
+    min-width: 295px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-header__description h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .main-header__description p {
+    font-size: 16px;
+    line-height: 22.5px;
+  }
+
+  .user-navigation__list {
+    display: none;
+  }
+
+  .page body {
+    min-width: 320px;
+  }
+
+  .logo {
+    width: 42px;
+    height: 22px;
+  }
+
+  .logo--black {
+    fill: #011c40;
+  }
+
+  .toggle {
+    display: block;
+  }
 }
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .main-header {
+    background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat;
   }
 }

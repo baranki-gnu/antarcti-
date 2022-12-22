@@ -21,6 +21,32 @@
 @import "blocks/btn";
 @import "blocks/modal";
 
+//Major Blocks
+
+@import "blocks/major-blocks/header/main-header";
+@import "blocks/major-blocks/main/main-content";
+@import "blocks/major-blocks/footer/footer";
+@import "blocks/major-blocks/navigation/user-navigation";
+@import "blocks/major-blocks/page";
+
+
+
+//Medium Blocks
+
+@import "blocks/medium-blocks/about-service/about-service";
+@import "blocks/medium-blocks/contacts/contacts";
+@import "blocks/medium-blocks/cruises/cruises";
+@import "blocks/medium-blocks/form/form";
+@import "blocks/medium-blocks/strengths.scss/strengths";
+@import "blocks/minor-blocks/logo";
+
+
+//Minor Blocks
+
+@import "blocks/minor-blocks/button";
+@import "blocks/minor-blocks/social-media";
+@import "blocks/minor-blocks/toggle/toggle";
+
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
