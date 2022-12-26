@@ -1,0 +1,106 @@
+.order-form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat;
+
+  @supports (background-image: url("../img/background/form-background-desktop@1x.webp")) {
+    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat;
+  }
+
+  @supports (background-image: url("../img/background/form-background-desktop@2x.webp")) {
+    background-image: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat;
+  }
+
+  background-color: $color-beau-blue;
+}
+
+.order-form__wrap {
+  display: grid;
+  grid-template-columns: 1fr 595px;
+  grid-template-rows: 1fr;
+}
+
+.order-form__inner-wrap {
+  width: 448px;
+  margin: 0 0 0 auto;
+  padding-right: 45px;
+  grid-column: 2/3;
+}
+
+.order-form h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  color: $color-tangaroa;
+}
+
+.order-form p {
+  margin: 0 0 35px 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-tangaroa;
+}
+
+.order-form form {
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: ($vp-1024 - 1px)) {
+  .order-form {
+    padding-top: 45px;
+    padding-bottom: 123px;
+    background-image: none;
+    background-color: $color-tangaroa;
+  }
+
+  .order-form__wrap {
+    display: block;
+  }
+
+  .order-form form {
+    margin: 0 auto;
+  }
+
+  .order-form__inner-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .order-form__title-text-wrap {
+    margin: 0 auto;
+  }
+
+  .order-form h2 {
+    margin-bottom: 6px;
+  }
+
+  .order-form p {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: ($vp-768 - 1px)) {
+  .order-form {
+    padding-bottom: 87px;
+  }
+
+  .order-form h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .order-form p {
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

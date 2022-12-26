@@ -36,6 +36,7 @@
 @import "blocks/medium-blocks/about-service/about-service";
 @import "blocks/medium-blocks/contacts/contacts";
 @import "blocks/medium-blocks/cruises/cruises";
+@import "blocks/medium-blocks/form/order-form";
 @import "blocks/medium-blocks/form/form";
 @import "blocks/medium-blocks/strengths.scss/strengths";
 @import "blocks/minor-blocks/logo";
@@ -48,6 +49,8 @@
 
 @import "blocks/minor-blocks/button";
 @import "blocks/minor-blocks/toggle/toggle";
+@import "blocks/minor-blocks/input-textarea-wrap";
+@import "blocks/minor-blocks/consent-checkbox-wrap";
 
 
 // ---------------------------------

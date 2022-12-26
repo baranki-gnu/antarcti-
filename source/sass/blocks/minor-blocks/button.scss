@@ -1,0 +1,18 @@
+.button {
+  width: 100%;
+  height: min-content;
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: $color-tangaroa;
+  text-align: center;
+  text-decoration: none;
+  background-color: $color-alice-blue;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $color-quartz;
+}
