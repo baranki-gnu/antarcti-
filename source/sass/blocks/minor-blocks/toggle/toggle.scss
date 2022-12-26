@@ -2,12 +2,56 @@
   display: none;
 }
 
-.toggle--opened {
-  display: block;
-}
-
 @media (max-width: ($vp-768 - 1px)) {
   .toggle {
+    display: flex;
+  }
+
+  .toggle-button {
+    width: min-content;
+    height: min-content;
+    border-width: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .toggle--closed .toggle__burger-svg {
     display: block;
+  }
+
+  .toggle--closed .toggle__cross {
+    display: none;
+  }
+
+  .toggle--opened .toggle__burger-svg {
+    display: none;
+  }
+
+  .toggle--opened .toggle__cross {
+    display: block;
+  }
+
+  .toggle-button .toggle__burger-svg {
+    stroke: $color-alice-blue;
+    stroke-width: 2px;
+  }
+
+  .toggle-button .toggle__cross {
+    stroke: $color-tangaroa;
+    stroke-width: 2px;
+  }
+
+  .toggle-button:hover .toggle__burger-svg,
+  .toggle-button:hover .toggle__cross
+   {
+    stroke: $color-quartz;
+    stroke-width: 2px;
+  }
+
+  .toggle-button:active .toggle__burger-svg,
+  .toggle-button:active .toggle__cross
+   {
+    stroke: $color-solitude;
+    stroke-width: 2px;
   }
 }

@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  color: $color-alice-blue;
+  background-color: $color-tangaroa;
+}
+
+.footer__wrap {
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+@media (max-width: ($vp-1024 - 1px)) {
+  .footer__wrap {
+    gap: 10px;
+  }
+}
+
+@media (max-width: ($vp-768 - 1px)) {
+  .footer__wrap {
+    flex-direction: column;
+  }
+
+  .footer__inner-logo-wrap {
+    margin-bottom: 30px;
+  }
+
+  .footer__navigation {
+    margin-bottom: 30px;
+  }
+}

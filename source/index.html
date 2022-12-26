@@ -14,49 +14,177 @@
   <body>
     <div class="wrapper">
       <!--Header-->
-    <header class="page__header main-header main-header--nojs main-header--nav-closed"><!--Для открытия меню используется класс main-header--nav-opened-->
-      <div class="main-header__inner-wrap container">
-        <div class="main-header__logo-toggle-wrap">
-          <a class="logo">
-            <img src="img/svg/iceberg-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">
-          </a>
-          <div class="main-header__toggle toggle"><!--Для открытия меню используется класс toggle--opened-->
-            <button class="header__toggle-button toggle-button" aria-label="Открытие-закрытие меню">
-              <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
-            </button>
+    <header class="page__header main-header main-header--nojs main-header--nav-opened" data-header>
+      <!--Для открытия/закрытия меню используется класс main-header--nav-opened и main-header--nav-closed-->
+      <div class="main-header__outer-wrap container">
+        <div class="main-header__inner-wrap">
+          <div class="main-header__logo-toggle-wrap">
+            <a class="logo logo--black"
+              data-logo-link><!--Для изменения вида лого при открытии мобильного меню использовать класс logo--black-->
+              <!--<img src="img/svg/iceberg-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">-->
+              <svg class="logo__svg" focusable="false" width="70" height="38" aria-label="Круизы в Антарктику">
+                <use xlink:href="img/sprite/sprite.svg#iceberg-logo"></use>
+              </svg>
+            </a>
+            <div class="main-header__toggle toggle toggle--opened" data-toggle-wrap>
+              <!--Для изменения вида кнопки используется класс toggle--opened и toggle--closed-->
+              <button class="header__toggle-button toggle-button" aria-label="Открытие-закрытие меню" data-menu-toggle>
+                <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
+                <svg class="toggle__burger-svg" focusable="false" width="24" height="12" aria-label="Открыть меню">
+                  <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                </svg>
+                <svg class="toggle__cross" focusable="false" width="13" height="13" aria-label="Закрыть меню">
+                  <use xlink:href="img/sprite/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <!--Navigation-->
-        <nav class="main-header__navigation navigation container">
-          <div class="navigation__user-nav user-navigation">
+          <!--Navigation-->
+          <nav class="main-header__navigation user-navigation">
             <ul class="user-navigation__list">
               <li class="user-navigation__item">
-                <a class="user-navigation__link">Преимущества</a>
+                <a class="user-navigation__link" href="#">Преимущества</a>
               </li>
               <li class="user-navigation__item">
-                <a class="user-navigation__link">Направления</a>
+                <a class="user-navigation__link" href="#">Направления</a>
               </li>
               <li class="user-navigation__item">
-                <a class="user-navigation__link">Ближайшие круизы</a>
+                <a class="user-navigation__link" href="#">Ближайшие круизы</a>
               </li>
               <li class="user-navigation__item">
-                <a class="user-navigation__link">Контакты</a>
+                <a class="user-navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="main-header__central-screen central-screen container">
+        <div class="central-screen__description">
+          <h1 class="central-screen__title">Круизы в&nbsp;Антарктику</h1>
+          <p class="central-screen__promo">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </div>
+      </div>
+    </header>
+      <main class="page__main main-content">
+        <section class="main-content__voyage voyage container">
+          <div class="voyage__outer-wrap">
+            <div class="voyage__inner-wrap">
+              <h2 class="voyage__title">Путешествие на край Земли</h2>
+              <p class="voyage__text">
+                Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
+                миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные
+                айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+              </p>
+            </div>
+            <picture>
+              <source media="(max-width: 768px)"
+                srcset="img/content/penguins-mobile@1x.webp 1x, img/content/penguins-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)"
+                srcset="img/content/penguins-tablet@1x.webp 1x, img/content/penguins-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1024px)"
+                srcset="img/content/penguins-desktop@1x.webp 1x, img/content/penguins-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/content/penguins-desktop@1x.jpg"
+                srcset="img/content/penguins-desktop@1x.jpg 1x, img/content/penguins-desktop@2x.jpg 2x" width="560" height="301"
+                alt="Фотография пингвинов в Антарктике">
+            </picture>
+          </div>
+        </section>
+        <section class="main-content__strengths strengths">
+          <div class="strengths__outer-wrap container">
+            <h2 class="strengths__title">Преимущества</h2>
+            <ul class="strengths__list">
+              <li class="strengths__item">
+                <svg class="logo__svg" focusable="false" width="27" height="32" aria-label="Круизы проводятся на небольших лайнерах">
+                  <use xlink:href="img/sprite/sprite.svg#little-ship"></use>
+                </svg>
+                <h3 class="strengths__item-title">Небольшой круизный лайнер</h3>
+                <p class="strengths__description">
+                  Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать
+                  шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.
+                </p>
+              </li>
+              <li class="strengths__item">
+                <svg class="logo__svg" focusable="false" width="38" height="32" aria-label="Круизы проводятся на небольших лайнерах">
+                  <use xlink:href="img/sprite/sprite.svg#double-tick"></use>
+                </svg>
+                <h3 class="strengths__item-title">Система все включено</h3>
+                <p class="strengths__description">
+                  Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
+                  и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
+                </p>
+              </li>
+              <li class="strengths__item">
+                <svg class="logo__svg" focusable="false" width="44" height="32" aria-label="Круизы проводятся на небольших лайнерах">
+                  <use xlink:href="img/sprite/sprite.svg#ship"></use>
+                </svg>
+                <h3 class="strengths__item-title">Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p class="strengths__description">
+                  Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках
+                  типа Zodiack c&nbsp;опытными экскурсоводами.
+                </p>
               </li>
             </ul>
           </div>
-        </nav>
-      </div>
-      <div class="main-header__description">
-        <h1 class="main-header__title">Круизы в&nbsp;Антарктику</h1>
-        <p class="main-header__promo">Волшебный мир айсбергов и пингвинов</p>
-      </div>
-    </header>
-      <main>
+        </section>
+
 
 
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="page__footer footer">
+        <div class="footer__wrap container">
+
+            <div class="footer__inner-logo-wrap">
+              <a class="logo">
+                <svg class="logo__svg" focusable="false" width="70" height="38" aria-label="Круизы в Антарктику">
+                  <use xlink:href="img/sprite/sprite.svg#iceberg-logo"></use>
+                </svg>
+              </a>
+            </div>
+            <!--Navigation-->
+            <nav class="footer__navigation user-navigation user-navigation--bottom">
+              <ul class="user-navigation__list">
+                <li class="user-navigation__item">
+                  <a class="user-navigation__link" href="#">Преимущества</a>
+                </li>
+                <li class="user-navigation__item">
+                  <a class="user-navigation__link" href="#">Направления</a>
+                </li>
+                <li class="user-navigation__item">
+                  <a class="user-navigation__link" href="#">Ближайшие круизы</a>
+                </li>
+                <li class="user-navigation__item">
+                  <a class="user-navigation__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <section class="footer__social-media social-media">
+              <h2 class="visually-hidden">Посетите наши странички в социальных сетях</h2>
+              <ul class="social-media__list">
+                <li class="social-media__item">
+                  <a class="social-media__link social-media__link--classmates" href="#">
+                    <svg class="logo__svg" focusable="false" width="12" height="20" aria-label="Одноклассники">
+                      <use xlink:href="img/sprite/sprite.svg#classmates"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link social-media__link--star" href="#">
+                    <svg class="logo__svg" focusable="false" width="20" height="20" aria-label=""><!--ИЗМЕНИТЬ НАЗВАНИЕ-->
+                      <use xlink:href="img/sprite/sprite.svg#star"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-media__item">
+                  <a class="social-media__link social-media__link--alien" href="#">
+                    <svg class="logo__svg" focusable="false" width="20" height="20" aria-label=""><!--ИЗМЕНИТЬ НАЗВАНИЕ-->
+                      <use xlink:href="img/sprite/sprite.svg#alien"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+        </div>
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

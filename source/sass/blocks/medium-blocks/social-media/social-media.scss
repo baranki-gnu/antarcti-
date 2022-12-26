@@ -1,0 +1,40 @@
+.social-media__list {
+  width: 107px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  list-style-type: none
+}
+
+.social-media__item svg {
+  fill: $color-alice-blue;
+}
+
+.social-media__link:hover svg,
+.social-media__link:active svg {
+  fill: $color-quartz;
+}
+
+@media (max-width: ($vp-1024 - 1px)) {
+  .social-media__list {
+    width: 88px;
+    gap: 22px;
+  }
+
+  .social-media__link--classmates svg {
+    width: 10px;
+    height: 16px;
+  }
+
+  .social-media__link--star svg {
+    width: 17px;
+    height: 16px;
+  }
+
+  .social-media__link--alien svg {
+    width: 17px;
+    height: 16px;
+  }
+}
