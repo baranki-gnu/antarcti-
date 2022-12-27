@@ -1,52 +1,72 @@
 .order-form {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat;
+  background: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat,
+  linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
-  @supports (background-image: url("../img/background/form-background-desktop@1x.webp")) {
-    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat;
+  @supports (background: url("../img/background/form-background-desktop@1x.webp")) {
+    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
-  @supports (background-image: url("../img/background/form-background-desktop@2x.webp")) {
-    background-image: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat;
+  @supports (background: url("../img/background/form-background-desktop@2x.webp")) {
+    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
-
-  background-color: $color-beau-blue;
 }
 
 .order-form__wrap {
   display: grid;
-  grid-template-columns: 1fr 595px;
+  grid-template-columns: 52.84% 45.09%;
   grid-template-rows: 1fr;
+  gap: 24px;
+}
+
+.order-form__title-text-wrap {
+  max-width: 613px;
+  margin: auto auto;
+  //padding-left: 60px;
 }
 
 .order-form__inner-wrap {
-  width: 448px;
-  margin: 0 0 0 auto;
-  padding-right: 45px;
+  //width: 448px;
+  max-width: 523px;
+  margin: 0 auto;
+  //padding-right: 60px;
   grid-column: 2/3;
 }
 
 .order-form h2 {
+  max-width: 500px;
+  width: max-content;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding: 0;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 51px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
   color: $color-tangaroa;
 }
 
 .order-form p {
-  margin: 0 0 35px 5px;
-  font-size: 16px;
+  max-width: 360px;
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 27px;
+  text-align: left;
   color: $color-tangaroa;
+}
+
+.order-form br {
+  display: none;
 }
 
 .order-form form {
@@ -55,10 +75,29 @@
 
 @media (max-width: ($vp-1024 - 1px)) {
   .order-form {
-    padding-top: 45px;
-    padding-bottom: 123px;
-    background-image: none;
-    background-color: $color-tangaroa;
+    padding-top: 88px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+
+    background: url("../img/background/form-background-tablet@1x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+
+    @supports (background: url("../img/background/form-background-tablet@1x.webp")) {
+      background: url("../img/background/form-background-tablet@1x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+    }
+
+    @supports (background: url("../img/background/form-background-tablet@2x.webp")) {
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+    }
+    //background-color: $color-beau-blue;
   }
 
   .order-form__wrap {
@@ -79,28 +118,45 @@
   }
 
   .order-form h2 {
+    margin: 0 auto;
     margin-bottom: 6px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
   }
 
   .order-form p {
-    margin-left: 0;
-    margin-bottom: 25px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0;
+    text-align: center;
   }
 }
 
 @media (max-width: ($vp-768 - 1px)) {
   .order-form {
-    padding-bottom: 87px;
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 
   .order-form h2 {
-    font-size: 30px;
-    line-height: 42px;
+    width: min-content;
+    margin-bottom: 11px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 31px;
   }
 
   .order-form p {
-    margin-bottom: 35px;
-    font-size: 14px;
-    line-height: 19px;
+    margin-bottom: 36px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .order-form br {
+    display: block;
   }
 }

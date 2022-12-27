@@ -353,12 +353,12 @@
             </ul>
           </div>
         </section>
-        <section class="main-content__order-form order-form" data-feedback-form>
+        <section class="main-content__order-form order-form" data-order-form>
           <div class="order-form__wrap container">
             <div class="order-form__title-text-wrap">
               <h2 class="order-form__title title">Раннее бронирование</h2>
               <p class="order-form__promo-text">
-                Забронируйте тур за&nbsp;3-6 месяцев
+                Забронируйте тур <br>за&nbsp;3-6 месяцев
                 до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
               </p>
             </div>
@@ -375,21 +375,21 @@
                 <div class="form__telephone-field input-textarea-wrap" data-telephone-input>
                   <label class="form__telephone-field-label">
                     <span class="visually-hidden">Введите телефон</span>
-                    <input type="text" inputmode="tel" placeholder="Телефон" name="user-telephone" minlength="16" required>
+                    <input type="text" inputmode="tel" placeholder="Телефон" name="user-telephone" minlength="11" required>
                     <em data-telephone-warning>Введите 10-значный номер телефона</em><!--Класс для включения видимости .input-textarea-wrap__show-tip-->
                   </label>
                 </div>
                 <div class="form__email-field input-textarea-wrap" data-email-input>
                   <label class="form__email-field-label">
-                    <span class="visually-hidden">Введите телефон</span>
-                    <input type="text" placeholder="Email" name="user-email" required>
+                    <span class="visually-hidden">Введите e-mail</span>
+                    <input type="text" placeholder="Email" name="user-email" required pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i">
                   </label>
                 </div>
                 <div class="form__consent-checkbox consent-checkbox-wrap">
                   <label class="form__consent-checkbox-label">
                     <input type="checkbox" name="consent" checked required>
                     <span></span>
-                    <b>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</b>
+                    <b>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</b>
                   </label>
                 </div>
                 <button type="submit" data-send-button>Оставить заявку</button>

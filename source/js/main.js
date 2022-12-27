@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {turnToggleOn} from './utils/menu-toggle';
+import {startStoringData} from './utils/form-data-storage';
 
 // ---------------------------------
 
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   turnToggleOn();
+  startStoringData();
 
   // Modules
   // ---------------------------------

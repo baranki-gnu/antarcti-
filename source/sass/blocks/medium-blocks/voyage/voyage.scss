@@ -60,6 +60,11 @@
 }
 
 @media (max-width: ($vp-768 - 1px)) {
+  .voyage img,
+  .voyage picture {
+    min-width: 290px;
+  }
+
   .voyage__outer-wrap {
     flex-direction: column;
   }

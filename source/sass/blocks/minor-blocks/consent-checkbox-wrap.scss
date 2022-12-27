@@ -1,4 +1,6 @@
 .consent-checkbox-wrap {
+  width: 100%;
+  padding-top: 5px;
   position: relative;
 }
 
@@ -16,20 +18,23 @@
 }
 
 .consent-checkbox-wrap b {
-  margin-left: 25px;
+  margin-left: 22px;
   display: block;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
-  line-height: 16px;
-  color: $color-default-white;
+  line-height: 13px;
+  color: $color-alice-blue;
   text-align: left;
 }
 
 .consent-checkbox-wrap span {
-  width: 15px;
-  height: 15px;
-  border: 1px solid $color-default-white;
-  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  //border: 1px solid $color-default-white;
+  //border-radius: 2px;
+  top: 0;
+  left: 0;
+  background-color: $color-alice-blue;
   content: "";
   position: absolute;
   z-index: 3;
@@ -48,16 +53,16 @@
 }
 
 .consent-checkbox-wrap:hover b {
-  color: $color-tangaroa;
+  color: $color-quartz;
 }
 
 .consent-checkbox-wrap:hover span {
-  border-color: $color-tangaroa;
+  border-color: $color-quartz;
 }
 
-.consent-checkbox-wrap:hover input:checked + span {
-  background-image: url("../img/svg/tick-black.svg");
-}
+//.consent-checkbox-wrap:hover input:checked + span {
+//  background-image: url("../img/svg/tick-black.svg");
+//}
 
 .consent-checkbox-wrap input:focus + span {
   outline: 2px solid $color-tangaroa;

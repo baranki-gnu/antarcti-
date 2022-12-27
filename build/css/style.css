@@ -1060,56 +1060,78 @@ button,
 .order-form {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat;
-  background-color: #bbd5e6;
+  background: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+  background: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+  background: url("../img/background/form-background-desktop@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
 }
 
-@supports (background-image: url("../img/background/form-background-desktop@1x.webp")) {
+@supports (background: url("../img/background/form-background-desktop@1x.webp")) {
   .order-form {
-    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 }
 
-@supports (background-image: url("../img/background/form-background-desktop@2x.webp")) {
+@supports (background: url("../img/background/form-background-desktop@2x.webp")) {
   .order-form {
-    background-image: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 }
 
 .order-form__wrap {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 595px;
-  grid-template-columns: 1fr 595px;
+  -ms-grid-columns: 52.84% 45.09%;
+  grid-template-columns: 52.84% 45.09%;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
+  gap: 24px;
+}
+
+.order-form__title-text-wrap {
+  max-width: 613px;
+  margin: auto auto;
 }
 
 .order-form__inner-wrap {
-  width: 448px;
-  margin: 0 0 0 auto;
-  padding-right: 45px;
+  max-width: 523px;
+  margin: 0 auto;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
 .order-form h2 {
+  max-width: 500px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding: 0;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 51px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
   color: #011c40;
 }
 
 .order-form p {
-  margin: 0 0 35px 5px;
-  font-size: 16px;
+  max-width: 360px;
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 27px;
+  text-align: left;
   color: #011c40;
+}
+
+.order-form br {
+  display: none;
 }
 
 .order-form form {
@@ -1118,16 +1140,21 @@ button,
 
 .form {
   width: 403px;
-  padding: 50px;
+  padding: 45px 50px 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #011c40;
 }
 
 .form h3 {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
@@ -1142,18 +1169,16 @@ button,
 
 .form input {
   width: 100%;
-  height: 50px;
   margin-bottom: 20px;
 }
 
 .form button {
   width: 100%;
-  padding: 15px;
+  padding: 11px;
   font-family: "Montserrat", sans-serif, "Arial";
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
-  letter-spacing: 0.05em;
   color: #011c40;
   background-color: #f9fbfd;
   border-width: 0;
@@ -1177,10 +1202,7 @@ button,
 
 .form__consent-checkbox {
   width: 260px;
-  margin-top: 15px;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
+  margin-bottom: 30px;
 }
 
 .form__consent-checkbox span {
@@ -1434,7 +1456,10 @@ button,
 
 .input-textarea-wrap input,
 .input-textarea-wrap textarea {
-  padding: 11px 16px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 11px 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif, "Arial";
@@ -1450,45 +1475,45 @@ button,
 .input-textarea-wrap input::-webkit-input-placeholder,
 .input-textarea-wrap textarea::-webkit-input-placeholder {
   font-family: "Montserrat", sans-serif, "Arial";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
 .input-textarea-wrap input::-moz-placeholder,
 .input-textarea-wrap textarea::-moz-placeholder {
   font-family: "Montserrat", sans-serif, "Arial";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
 .input-textarea-wrap input:-ms-input-placeholder,
 .input-textarea-wrap textarea:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif, "Arial";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
 .input-textarea-wrap input::-ms-input-placeholder,
 .input-textarea-wrap textarea::-ms-input-placeholder {
   font-family: "Montserrat", sans-serif, "Arial";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
 .input-textarea-wrap input::placeholder,
 .input-textarea-wrap textarea::placeholder {
   font-family: "Montserrat", sans-serif, "Arial";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
@@ -1515,6 +1540,8 @@ button,
 }
 
 .consent-checkbox-wrap {
+  width: 100%;
+  padding-top: 5px;
   position: relative;
 }
 
@@ -1533,20 +1560,21 @@ button,
 }
 
 .consent-checkbox-wrap b {
-  margin-left: 25px;
+  margin-left: 22px;
   display: block;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 400;
-  line-height: 16px;
-  color: #ffffff;
+  line-height: 13px;
+  color: #f9fbfd;
   text-align: left;
 }
 
 .consent-checkbox-wrap span {
-  width: 15px;
-  height: 15px;
-  border: 1px solid #ffffff;
-  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  background-color: #f9fbfd;
   content: "";
   position: absolute;
   z-index: 3;
@@ -1565,15 +1593,11 @@ button,
 }
 
 .consent-checkbox-wrap:hover b {
-  color: #011c40;
+  color: #d8d8d9;
 }
 
 .consent-checkbox-wrap:hover span {
-  border-color: #011c40;
-}
-
-.consent-checkbox-wrap:hover input:checked + span {
-  background-image: url("../img/svg/tick-black.svg");
+  border-color: #d8d8d9;
 }
 
 .consent-checkbox-wrap input:focus + span {
@@ -1670,11 +1694,35 @@ button,
   }
 
   .order-form {
-    padding-top: 45px;
-    padding-bottom: 123px;
-    background-image: none;
-    background-color: #011c40;
+    padding-top: 88px;
+    padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url("../img/background/form-background-tablet@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/form-background-tablet@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/form-background-tablet@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
+
+@supports (background: url("../img/background/form-background-tablet@1x.webp")) {
+    .order-form {
+      background: url("../img/background/form-background-tablet@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
+@supports (background: url("../img/background/form-background-tablet@2x.webp")) {
+    .order-form {
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
 
   .order-form__wrap {
     display: block;
@@ -1694,53 +1742,18 @@ button,
   }
 
   .order-form h2 {
+    margin: 0 auto;
     margin-bottom: 6px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
   }
 
   .order-form p {
-    margin-left: 0;
-    margin-bottom: 25px;
-  }
-
-  .form {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .form__name-field {
-    width: calc((100% - 30px) / 2);
-  }
-
-  .form__telephone-field {
-    width: calc((100% - 30px) / 2);
-  }
-
-  .form input {
-    width: 100%;
-    min-width: 320px;
-  }
-
-  .form__question-textarea {
-    width: 100%;
-    margin-bottom: 29px;
-  }
-
-  .form textarea {
-    width: 100%;
-    min-width: 670px;
-  }
-
-  .form__consent-checkbox {
-    margin-top: 0;
-    padding-top: 11px;
-  }
-
-  .form__consent-checkbox span {
-    top: 18px;
-  }
-
-  .form button {
-    margin-right: 85px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0;
+    text-align: center;
   }
 
   .strengths {
@@ -1839,6 +1852,12 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .main-header {
     background-image: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat;
+  }
+
+  .order-form {
+    background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
   .strengths {
@@ -1992,64 +2011,61 @@ button,
   }
 
   .order-form {
-    padding-bottom: 87px;
+    padding-top: 60px;
+    padding-bottom: 65px;
   }
 
   .order-form h2 {
-    font-size: 30px;
-    line-height: 42px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    margin-bottom: 11px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 31px;
   }
 
   .order-form p {
-    margin-bottom: 35px;
-    font-size: 14px;
-    line-height: 19px;
+    margin-bottom: 36px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .order-form br {
+    display: block;
   }
 
   .form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+    width: 100%;
+    padding: 36px 30px;
   }
 
-  .form__name-field {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .form__telephone-field {
-    width: 100%;
+  .form h3 {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
   }
 
   .form button {
-    margin-right: 0;
-    padding: 14px 70px 12px 70px;
+    margin-bottom: 5px;
   }
 
-  .form__question-textarea {
-    margin-bottom: 25px;
-  }
-
-  .form__question-textarea textarea {
-    min-height: 180px;
-    padding: 25px 15px;
-  }
-
-  .form input,
-  .form textarea {
-    min-width: 270px;
+  .form input {
+    min-width: 230px;
   }
 
   .form__consent-checkbox {
-    padding: 25px 5px 0 5px;
+    margin-bottom: 25px;
+    padding: 0;
+    padding-left: 5px;
   }
 
   .form__consent-checkbox span {
-    top: 32px;
-    left: 5px;
+    top: 2px;
+    left: 1px;
   }
 
   .strengths {
@@ -2104,6 +2120,11 @@ button,
   .central-screen__description p {
     font-size: 16px;
     line-height: 22.5px;
+  }
+
+  .voyage img,
+  .voyage picture {
+    min-width: 290px;
   }
 
   .voyage__outer-wrap {
@@ -2217,7 +2238,9 @@ button,
   }
 
   .order-form {
-    background-image: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
   .strengths {
