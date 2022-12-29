@@ -1519,7 +1519,15 @@ button,
 
 .input-textarea-wrap input:hover,
 .input-textarea-wrap textarea:hover {
-  outline: 1px solid #bbd5e6;
+  outline: 2px solid #bbd5e6;
+}
+
+.input-textarea-wrap input.valid {
+  outline: 2px solid #2c39f2;
+}
+
+.input-textarea-wrap input.invalid {
+  outline: 2px solid #811733;
 }
 
 .input-textarea-wrap em {
@@ -1842,10 +1850,6 @@ button,
   .social-media__link--alien svg {
     width: 17px;
     height: 16px;
-  }
-
-  .input-textarea-wrap textarea {
-    padding-top: 30px;
   }
 }
 

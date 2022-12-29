@@ -28,7 +28,15 @@
 
 .input-textarea-wrap input:hover,
 .input-textarea-wrap textarea:hover {
-  outline: 1px solid $color-beau-blue;
+  outline: 2px solid $color-beau-blue;
+}
+
+.input-textarea-wrap input.valid {
+  outline: 2px solid $color-neon-blue;
+}
+
+.input-textarea-wrap input.invalid {
+  outline: 2px solid $color-scarlett;
 }
 
 
@@ -49,11 +57,11 @@
   color: $color-scarlett;
 }
 
-@media (max-width: ($vp-1024 - 1px)) {
-  .input-textarea-wrap textarea {
-    padding-top: 30px;
-  }
-}
+//@media (max-width: ($vp-1024 - 1px)) {
+//  .input-textarea-wrap textarea {
+//    padding-top: 30px;
+//  }
+//}
 
 @media (max-width: ($vp-768 - 1px)) {
   .input-textarea-wrap textarea {

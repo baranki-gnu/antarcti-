@@ -353,7 +353,7 @@
             </ul>
           </div>
         </section>
-        <section class="main-content__order-form order-form" data-order-form>
+        <section class="main-content__order-form order-form">
           <div class="order-form__wrap container">
             <div class="order-form__title-text-wrap">
               <h2 class="order-form__title title">Раннее бронирование</h2>
@@ -363,26 +363,26 @@
               </p>
             </div>
             <div class="order-form__inner-wrap">
-              <form class="order-form__form form" action="https://echo.htmlacademy.ru" method="post">
+              <form class="order-form__form form" action="https://echo.htmlacademy.ru" method="post" data-order-form>
                 <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
                 <div class="form__name-field input-textarea-wrap" data-name-input>
                   <label class="form__name-field-label">
                     <span class="visually-hidden">Введите имя</span>
-                    <input type="text" placeholder="Имя" name="user-name" required>
+                    <input type="text" placeholder="Имя" name="user-name" required minlength="1">
                     <em data-name-warning>Введите имя</em><!--Класс для включения видимости .input-textarea-wrap__show-tip-->
                   </label>
                 </div>
                 <div class="form__telephone-field input-textarea-wrap" data-telephone-input>
                   <label class="form__telephone-field-label">
                     <span class="visually-hidden">Введите телефон</span>
-                    <input type="text" inputmode="tel" placeholder="Телефон" name="user-telephone" minlength="11" required>
+                    <input type="tel" placeholder="Телефон" name="user-telephone" required><!--minlength="11"-->
                     <em data-telephone-warning>Введите 10-значный номер телефона</em><!--Класс для включения видимости .input-textarea-wrap__show-tip-->
                   </label>
                 </div>
                 <div class="form__email-field input-textarea-wrap" data-email-input>
                   <label class="form__email-field-label">
                     <span class="visually-hidden">Введите e-mail</span>
-                    <input type="text" placeholder="Email" name="user-email" required pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i">
+                    <input type="email" placeholder="Email" name="user-email" required><!-- oninput="validateEmail(this)"-->
                   </label>
                 </div>
                 <div class="form__consent-checkbox consent-checkbox-wrap">
