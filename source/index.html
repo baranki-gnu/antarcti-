@@ -14,20 +14,17 @@
   <body>
     <div class="wrapper">
       <!--Header-->
-    <header class="page__header main-header main-header--nojs main-header--nav-opened" data-header>
-      <!--Для открытия/закрытия меню используется класс main-header--nav-opened и main-header--nav-closed-->
-      <div class="main-header__outer-wrap container">
-        <div class="main-header__inner-wrap">
+    <header class="page__header main-header main-header--nojs main-header--nav-closed" data-header><!--Для открытия/закрытия меню используется класс main-header--nav-opened и main-header--nav-closed-->
+      <!--<div class="main-header__outer-wrap ">-->
+        <div class="main-header__inner-wrap container">
           <div class="main-header__logo-toggle-wrap">
-            <a class="logo logo--black"
-              data-logo-link><!--Для изменения вида лого при открытии мобильного меню использовать класс logo--black-->
+            <a class="logo" data-logo-link><!--Для изменения вида лого при открытии мобильного меню использовать класс logo--black-->
               <!--<img src="img/svg/iceberg-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">-->
               <svg class="logo__svg" focusable="false" width="70" height="38" aria-label="Круизы в Антарктику">
                 <use xlink:href="img/sprite/sprite.svg#iceberg-logo"></use>
               </svg>
             </a>
-            <div class="main-header__toggle toggle toggle--opened" data-toggle-wrap>
-              <!--Для изменения вида кнопки используется класс toggle--opened и toggle--closed-->
+            <div class="main-header__toggle toggle toggle--closed" data-toggle-wrap><!--Для изменения вида кнопки используется класс toggle--opened и toggle--closed-->
               <button class="header__toggle-button toggle-button" aria-label="Открытие-закрытие меню" data-menu-toggle>
                 <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
                 <svg class="toggle__burger-svg" focusable="false" width="24" height="12" aria-label="Открыть меню">
@@ -57,19 +54,21 @@
             </ul>
           </nav>
         </div>
-      </div>
-      <div class="main-header__central-screen central-screen container">
-        <div class="central-screen__description">
-          <h1 class="central-screen__title">Круизы в&nbsp;Антарктику</h1>
-          <p class="central-screen__promo">Волшебный мир айсбергов и&nbsp;пингвинов</p>
-        </div>
-      </div>
+      <!--</div>-->
     </header>
       <main class="page__main main-content">
+        <div class="main-header__central-screen central-screen">
+          <div class="container">
+            <div class="central-screen__description">
+              <h1 class="central-screen__title">Круизы в&nbsp;Антарктику</h1>
+              <p class="central-screen__promo">Волшебный мир <br>айсбергов и&nbsp;пингвинов</p>
+            </div>
+          </div>
+        </div>
         <section class="main-content__voyage voyage container">
           <div class="voyage__outer-wrap">
             <div class="voyage__inner-wrap">
-              <h2 class="voyage__title">Путешествие на край Земли</h2>
+              <h2 class="voyage__title">Путешествие на&nbsp;край Земли</h2>
               <p class="voyage__text">
                 Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
                 миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные
@@ -93,31 +92,31 @@
           <div class="strengths__outer-wrap container">
             <h2 class="strengths__title">Преимущества</h2>
             <ul class="strengths__list">
-              <li class="strengths__item">
+              <li class="strengths__item strengths__item--little-ship">
                 <svg class="logo__svg" focusable="false" width="27" height="32" aria-label="Круизы проводятся на небольших лайнерах">
                   <use xlink:href="img/sprite/sprite.svg#little-ship"></use>
                 </svg>
-                <h3 class="strengths__item-title">Небольшой круизный лайнер</h3>
+                <h3 class="strengths__item-title">Небольшой круизный&nbsp;лайнер</h3>
                 <p class="strengths__description">
                   Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать
                   шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.
                 </p>
               </li>
-              <li class="strengths__item">
+              <li class="strengths__item strengths__item--double-tick">
                 <svg class="logo__svg" focusable="false" width="38" height="32" aria-label="Круизы проводятся на небольших лайнерах">
                   <use xlink:href="img/sprite/sprite.svg#double-tick"></use>
                 </svg>
-                <h3 class="strengths__item-title">Система все включено</h3>
+                <h3 class="strengths__item-title">Система <br>все&nbsp;включено</h3>
                 <p class="strengths__description">
-                  Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
+                  Все наши круизы работают по&nbsp;системе “Все Включено”. Великолепные блюда
                   и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
                 </p>
               </li>
-              <li class="strengths__item">
+              <li class="strengths__item strengths__item--ship">
                 <svg class="logo__svg" focusable="false" width="44" height="32" aria-label="Круизы проводятся на небольших лайнерах">
                   <use xlink:href="img/sprite/sprite.svg#ship"></use>
                 </svg>
-                <h3 class="strengths__item-title">Экскурсионные туры на&nbsp;Zodiac</h3>
+                <h3 class="strengths__item-title">Экскурсионные <br>туры на&nbsp;Zodiac</h3>
                 <p class="strengths__description">
                   Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках
                   типа Zodiack c&nbsp;опытными экскурсоводами.
@@ -157,7 +156,7 @@
                   <a class="cruises__order-item button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="cruises__item cruises__item--info" data-cruise-item>
+              <li class="cruises__item cruises__item--check" data-cruise-item><!--Для проверки PP внутри карточки подставить класс .cruises__item--check-->
                 <h3 class="cruises__item-title">Круиз “Элайн”</h3>
                 <picture>
                   <source media="(max-width: 768px)"
@@ -324,7 +323,7 @@
                 </div>
               </li>
               <li class="cruises__item" data-cruise-item>
-                <h3 class="cruises__item-title">Круиз &laquo;Минион&nbsp;- 1&raquo;</h3>
+                <h3 class="cruises__item-title">Круиз “Минион&nbsp;- 1”</h3>
                 <picture>
                   <source media="(max-width: 768px)"
                     srcset="img/content/minion-mobile@1x.webp 1x, img/content/minion-mobile@2x.webp 2x" type="image/webp">
@@ -396,6 +395,44 @@
               </form>
             </div>
           </div>
+        </section>
+        <section class="main-content__contacts contacts">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <div class="contacts__wrap container">
+            <div class="contacts__map">
+              <picture>
+                <source media="(max-width: 768px)"
+                  srcset="img/content/map-mobile@1x.webp 1x, img/content/map-mobile@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1023px)"
+                  srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1024px)"
+                  srcset="img/content/map-desktop@1x.webp 1x, img/content/map-desktop@2x.webp 2x" type="image/webp">
+                <img src="img/content/map-desktop@1x.jpg"
+                  srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x" width="560" height="306"
+                  alt="Фотография из путешествия в круизе Леонор.">
+              </picture>
+            </div>
+            <div class="contacts__text">
+              <div class="contacts__text-inner-wrap">
+                <b class="contacts__text-promt">
+                  У&nbsp;вас ещё остались вопросы или сомнения?<br>
+                  Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
+                </b>
+                <p class="contacts__address">
+                  <svg class="logo__svg" focusable="false" width="18" height="22" aria-label="Наш офис находится здесь">
+                    <use xlink:href="img/sprite/sprite.svg#mark"></use>
+                  </svg>
+                  <span>г. Санкт Петербург, <br>ул. Большая Конюшенная, 19/8</span>
+                </p>
+                <a class="contacts__tel-link" href="88002000000">
+                  <svg class="logo__svg" focusable="false" width="18" height="18" aria-label="Позвоните нам">
+                    <use xlink:href="img/sprite/sprite.svg#phone"></use>
+                  </svg>
+                  <span>8-800-200-00-00</span>
+                </a>
+              </div>
+            </div>
+            </div>
         </section>
 
 

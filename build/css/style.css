@@ -783,33 +783,12 @@ button,
 
 .main-header {
   width: 100%;
-  margin-top: 0;
-  margin-bottom: auto;
-  min-height: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   font-size: 16px;
   line-height: 19.5px;
   color: #f9fbfd;
-  background-image: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat;
-  background-color: #00366f;
-}
-
-@supports (background-image: url("../img/background/central-background-desktop@1x.webp")) {
-  .main-header {
-    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat;
-  }
-}
-
-@supports (background-image: url("../img/background/central-background-desktop@2x.webp")) {
-  .main-header {
-    background-image: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main-header__inner-wrap {
@@ -848,9 +827,6 @@ button,
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .user-navigation {
@@ -892,6 +868,14 @@ button,
   color: #f9fbfd;
 }
 
+.user-navigation--bottom .user-navigation__item:first-child {
+  margin-left: 25px;
+}
+
+.user-navigation--bottom .user-navigation__list {
+  padding-bottom: 5px;
+}
+
 .user-navigation__item a:hover {
   color: #d8d8d9;
 }
@@ -903,10 +887,114 @@ button,
   line-height: 24px;
   color: #011c40;
   background-color: #f9fbfd;
+  position: relative;
 }
 
 .page header {
   margin: 0;
+}
+
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.contacts__wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contacts__map {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.contacts__map img,
+.contacts__map picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contacts__text {
+  margin: 0 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.contacts__text-inner-wrap {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  max-width: 500px;
+  margin: auto auto auto 0;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.contacts__text b {
+  max-width: 500px;
+  margin: 0 auto 32px 0;
+  padding: 0;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #011c40;
+  text-align: left;
+}
+
+.contacts__text span,
+.contacts__text a {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #011c40;
+  text-align: left;
+}
+
+.contacts__text a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+.contacts__text p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__text a:hover span {
+  color: #3384af;
+}
+
+.contacts__text a:hover svg {
+  fill: #3384af;
+}
+
+.contacts__text br {
+  display: none;
+}
+
+.contacts__text svg {
+  margin-right: 10px;
+  display: block;
+  fill: #011c40;
 }
 
 .cruises {
@@ -972,7 +1060,7 @@ button,
 
 .cruises__item:hover,
 .cruises__item:focus-within,
-.cruises__item--info {
+.cruises__item--check {
   height: 386px;
   padding: 30px 25px 35px 25px;
   display: -webkit-box;
@@ -986,20 +1074,22 @@ button,
   -webkit-box-shadow: 35px 0px, 4px rgba(1, 28, 64, 0.15);
   box-shadow: 35px 0px, 4px rgba(1, 28, 64, 0.15);
   overflow-y: auto;
+  -webkit-box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px 0 rgba(1, 28, 64, 0.15);
 }
 
 .cruises__item:hover img,
 .cruises__item:hover picture,
 .cruises__item:focus-within img,
 .cruises__item:focus-within picture,
-.cruises__item--info img,
-.cruises__item--info picture {
+.cruises__item--check img,
+.cruises__item--check picture {
   display: none;
 }
 
 .cruises__item:hover .cruises__inner-wrap,
 .cruises__item:focus-within .cruises__inner-wrap,
-.cruises__item--info .cruises__inner-wrap {
+.cruises__item--check .cruises__inner-wrap {
   height: 100%;
   margin-bottom: 0;
   display: -webkit-box;
@@ -1016,21 +1106,21 @@ button,
 
 .cruises__item:hover h3,
 .cruises__item:focus-within h3,
-.cruises__item--info h3 {
+.cruises__item--check h3 {
   margin: 0 auto 15px 0;
   position: static;
 }
 
 .cruises__item:hover dl,
 .cruises__item:focus-within dl,
-.cruises__item--info dl {
+.cruises__item--check dl {
   margin: 0 0 auto 0;
   padding: 0;
 }
 
 .cruises__item:hover dt,
 .cruises__item:focus-within dt,
-.cruises__item--info dt {
+.cruises__item--check dt {
   margin: 0 auto 0 0;
   font-size: 14px;
   font-weight: 500;
@@ -1041,7 +1131,7 @@ button,
 
 .cruises__item:hover dd,
 .cruises__item:focus-within dd,
-.cruises__item--info dd {
+.cruises__item--check dd {
   margin: 0 auto 12px 0;
   font-size: 14px;
   font-weight: 400;
@@ -1149,6 +1239,8 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px 0 rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px 0 rgba(1, 28, 64, 0.15);
 }
 
 .form h3 {
@@ -1218,19 +1310,24 @@ button,
   width: 100%;
   padding-top: 112px;
   padding-bottom: 120px;
-  background-image: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat;
-  background-color: #bbd5e6;
+  background: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+  background: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+  background: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
 }
 
-@supports (background-image: url("../img/background/advantages-background-desktop@1x.webp")) {
+@supports (background: url("../img/background/advantages-background-desktop@1x.webp")) {
   .strengths {
-    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 }
 
-@supports (background-image: url("../img/background/advantages-background-desktop@2x.webp")) {
+@supports (background: url("../img/background/advantages-background-desktop@2x.webp")) {
   .strengths {
-    background-image: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 }
 
@@ -1289,6 +1386,10 @@ button,
   text-align: left;
 }
 
+.strengths__item-title br {
+  display: none;
+}
+
 .strengths__item p {
   margin: 0;
   padding: 0;
@@ -1313,6 +1414,34 @@ button,
   fill: #f9fbfd;
 }
 
+.central-screen {
+  width: 100%;
+  min-height: 650px;
+  margin-top: 0;
+  margin-bottom: auto;
+  background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+  background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+  background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@supports (background: url("../img/background/central-background-desktop@1x.webp")) {
+  .central-screen {
+    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+  }
+}
+
+@supports (background: url("../img/background/central-background-desktop@2x.webp")) {
+  .central-screen {
+    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+  }
+}
+
 .central-screen__description {
   min-width: 823px;
   max-width: 973px;
@@ -1331,7 +1460,7 @@ button,
 .central-screen__description h1 {
   width: 100%;
   margin: 0;
-  margin-top: 162px;
+  margin-top: 269px;
   margin-right: auto;
   margin-bottom: 12px;
   padding: 0;
@@ -1352,9 +1481,12 @@ button,
   text-align: left;
 }
 
+.central-screen br {
+  display: none;
+}
+
 .voyage {
   width: 100%;
-  margin-top: 0;
   padding-top: 120px;
   padding-bottom: 145px;
 }
@@ -1403,10 +1535,14 @@ button,
   display: block;
 }
 
+.social-media {
+  margin: 0 0 0 auto;
+}
+
 .social-media__list {
   width: 107px;
   margin: 0;
-  padding: 0;
+  padding: 10px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1660,24 +1796,17 @@ button,
     padding-right: 45px;
   }
 
-  .main-header {
-    background-image: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat;
+  .main-header__inner-wrap {
+    padding-top: 30px;
   }
-
-@supports (background-image: url("../img/background/central-background-tablet@1x.webp")) {
-    .main-header {
-      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat;
-    }
-}
-
-@supports (background-image: url("../img/background/central-background-tablet@2x.webp")) {
-    .main-header {
-      background-image: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat;
-    }
-}
 
   .footer__wrap {
     gap: 10px;
+  }
+
+  .footer__wrap {
+    padding-top: 45px;
+    padding-bottom: 44px;
   }
 
   .user-navigation__item a {
@@ -1685,8 +1814,52 @@ button,
     line-height: 17px;
   }
 
+  .user-navigation--bottom a {
+    font-size: 12px;
+    line-height: 14.5px;
+  }
+
+  .user-navigation__item,
   .user-navigation--bottom .user-navigation__item {
     margin-left: 23px;
+  }
+
+  .user-navigation--bottom .user-navigation__item:first-child {
+    margin-left: 15px;
+  }
+
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__wrap {
+    gap: 30px;
+  }
+
+  .contacts__wrap br {
+    display: none;
+  }
+
+  .contacts__map img,
+  .contacts__map picture {
+    min-width: 324px;
+  }
+
+  .contacts__address svg {
+    width: 18px;
+    height: 22px;
+  }
+
+  .cruises {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  .cruises h2 {
+    margin-bottom: 49px;
+    font-size: 26px;
+    line-height: 39px;
   }
 
   .cruises__list {
@@ -1699,6 +1872,17 @@ button,
 
   .cruises__item {
     min-width: 309px;
+  }
+
+  .cruises__item h3 {
+    bottom: 8px;
+    left: 33px;
+  }
+
+  .cruises__item:hover,
+  .cruises__item:focus-within,
+  .cruises__item--check {
+    padding: 30px 35px 35px 35px;
   }
 
   .order-form {
@@ -1751,7 +1935,7 @@ button,
 
   .order-form h2 {
     margin: 0 auto;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
     font-size: 34px;
     line-height: 51px;
     text-align: center;
@@ -1765,18 +1949,26 @@ button,
   }
 
   .strengths {
-    background-image: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat;
+    padding-top: 90px;
+    padding-bottom: 101px;
+    background: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
-@supports (background-image: url("../img/background/advantages-background-tablet@1x.webp")) {
+@supports (background: url("../img/background/advantages-background-tablet@1x.webp")) {
     .strengths {
-      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     }
 }
 
-@supports (background-image: url("../img/background/advantages-background-tablet@2x.webp")) {
+@supports (background: url("../img/background/advantages-background-tablet@2x.webp")) {
     .strengths {
-      background-image: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     }
 }
 
@@ -1789,6 +1981,25 @@ button,
     gap: 30px;
   }
 
+  .strengths__item {
+    padding: 26px 16px 23px 20px;
+  }
+
+  .strengths__item--little-ship svg {
+    width: 21px;
+    height: 26px;
+  }
+
+  .strengths__item--double-tick svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  .strengths__item--ship svg {
+    width: 36px;
+    height: 26px;
+  }
+
   .strengths__item h3 {
     font-size: 18px;
     line-height: 25px;
@@ -1797,6 +2008,7 @@ button,
   .logo {
     width: 38px;
     height: 20px;
+    padding-top: 3px;
   }
 
   .logo svg {
@@ -1804,10 +2016,34 @@ button,
     height: 20px;
   }
 
+  .central-screen {
+    min-height: 638px;
+    background: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+@supports (background: url("../img/background/central-background-tablet@1x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
+
+@supports (background: url("../img/background/central-background-tablet@2x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
+
   .central-screen__description {
     min-width: 680px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 0;
   }
 
   .central-screen__description h1 {
@@ -1820,9 +2056,15 @@ button,
     line-height: 22px;
   }
 
+  .voyage {
+    padding-top: 90px;
+    padding-bottom: 92px;
+  }
+
   .voyage h2 {
+    width: 220px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
     font-size: 26px;
     line-height: 36.5px;
   }
@@ -1830,10 +2072,13 @@ button,
   .voyage img,
   .voyage picture {
     min-width: 324px;
+    margin-top: 5px;
+    margin-right: 5px;
   }
 
   .social-media__list {
     width: 88px;
+    padding-top: 7px;
     gap: 22px;
   }
 
@@ -1854,10 +2099,6 @@ button,
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
-  .main-header {
-    background-image: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat;
-  }
-
   .order-form {
     background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
     background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
@@ -1865,7 +2106,15 @@ button,
   }
 
   .strengths {
-    background-image: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat;
+    background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+  }
+
+  .central-screen {
+    background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
 }
 
@@ -1890,22 +2139,6 @@ button,
     width: 100%;
   }
 
-  .main-header {
-    background-image: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat;
-  }
-
-@supports (background-image: url("../img/background/central-background-mobile@1x.webp")) {
-    .main-header {
-      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat;
-    }
-}
-
-@supports (background-image: url("../img/background/central-background-mobile@2x.webp")) {
-    .main-header {
-      background-image: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat;
-    }
-}
-
   .main-header__logo-toggle-wrap {
     width: 100%;
     display: -webkit-box;
@@ -1914,6 +2147,10 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .main-header__inner-wrap {
+    padding-top: 20px;
   }
 
   .main-header--nav-opened .main-header__inner-wrap {
@@ -1950,6 +2187,8 @@ button,
   }
 
   .footer__wrap {
+    padding-top: 40px;
+    padding-bottom: 31px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1957,11 +2196,11 @@ button,
   }
 
   .footer__inner-logo-wrap {
-    margin-bottom: 30px;
+    margin-bottom: 11px;
   }
 
   .footer__navigation {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 
   .user-navigation__list {
@@ -1991,8 +2230,12 @@ button,
     margin: 0 auto 0 0;
   }
 
+  .user-navigation--bottom .user-navigation__item:first-child {
+    margin-left: 0;
+  }
+
   .user-navigation--bottom .user-navigation__item:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 9px;
   }
 
   .user-navigation--bottom a {
@@ -2005,13 +2248,88 @@ button,
     min-width: 320px;
   }
 
+  .contacts {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .contacts__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .contacts__text-inner-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .contacts__text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contacts__map {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .contacts__map img,
+  .contacts__map picture {
+    min-width: 100%;
+  }
+
+  .contacts__text span br {
+    display: block;
+  }
+
+  .contacts__text b {
+    margin-bottom: 29px;
+  }
+
+  .cruises {
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+
   .cruises__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
+  .cruises h2 {
+    margin-bottom: 29px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
   .cruises__item {
     min-width: 270px;
+  }
+
+  .cruises__item:hover,
+  .cruises__item:focus-within,
+  .cruises__item--check {
+    padding: 30px 25px;
+  }
+
+  .cruises__item h3 {
+    font-size: 18px;
+    line-height: 27px;
+    bottom: 1px;
+    left: 25px;
+  }
+
+  .cruises__item:hover a,
+  .cruises__item:focus-within a,
+  .cruises__item--check a {
+    margin-bottom: 5px;
   }
 
   .order-form {
@@ -2073,23 +2391,31 @@ button,
   }
 
   .strengths {
-    background-image: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat;
+    padding-top: 57px;
+    padding-bottom: 68px;
+    background: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
-@supports (background-image: url("../img/background/advantages-background-mobile@1x.webp")) {
+@supports (background: url("../img/background/advantages-background-mobile@1x.webp")) {
     .strengths {
-      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     }
 }
 
-@supports (background-image: url("../img/background/advantages-background-mobile@2x.webp")) {
+@supports (background: url("../img/background/advantages-background-mobile@2x.webp")) {
     .strengths {
-      background-image: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     }
 }
 
   .strengths h2 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2099,7 +2425,16 @@ button,
     grid-template-columns: 1fr;
   }
 
-  .logo {
+  .strengths__item {
+    padding-bottom: 19px;
+  }
+
+  .strengths__item-title br {
+    display: block;
+  }
+
+  .logo,
+  .logo svg {
     width: 42px;
     height: 22px;
   }
@@ -2110,13 +2445,37 @@ button,
     fill: #011c40;
   }
 
+  .central-screen {
+    min-height: 500px;
+    background: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+  }
+
+@supports (background: url("../img/background/central-background-mobile@1x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
+
+@supports (background: url("../img/background/central-background-mobile@2x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
+
   .central-screen__description {
     min-width: 295px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .central-screen__description h1 {
+    margin-top: 175px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -2124,6 +2483,15 @@ button,
   .central-screen__description p {
     font-size: 16px;
     line-height: 22.5px;
+  }
+
+  .central-screen br {
+    display: block;
+  }
+
+  .voyage {
+    padding-top: 55px;
+    padding-bottom: 85px;
   }
 
   .voyage img,
@@ -2144,19 +2512,23 @@ button,
 
   .voyage h2 {
     margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 26px;
-    line-height: 36.5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 33.5px;
   }
 
   .voyage p {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 16px;
   }
 
   .voyage img,
   .voyage picture {
     margin: 0 auto;
+  }
+
+  .social-media {
+    margin: 0 auto 0 0;
   }
 
   .toggle {
@@ -2172,6 +2544,11 @@ button,
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+    padding-bottom: 3px;
     border-width: 0;
     background-color: transparent;
     cursor: pointer;
@@ -2221,12 +2598,16 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
-  .main-header {
-    background-image: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat;
+  .strengths {
+    background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
-  .strengths {
-    background-image: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat;
+  .central-screen {
+    background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
 }
 
@@ -2237,10 +2618,6 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .main-header {
-    background-image: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat;
-  }
-
   .order-form {
     background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
     background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
@@ -2248,6 +2625,14 @@ button,
   }
 
   .strengths {
-    background-image: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+  }
+
+  .central-screen {
+    background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
 }

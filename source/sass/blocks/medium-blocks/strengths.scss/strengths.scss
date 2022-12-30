@@ -2,20 +2,23 @@
   width: 100%;
   padding-top: 112px;
   padding-bottom: 120px;
-  background-image: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat;
+  background: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat,
+  linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
-  @supports (background-image: url("../img/background/advantages-background-desktop@1x.webp")) {
-    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat;
+  @supports (background: url("../img/background/advantages-background-desktop@1x.webp")) {
+    background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat;
+    background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
-  @supports (background-image: url("../img/background/advantages-background-desktop@2x.webp")) {
-    background-image: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat;
+  @supports (background: url("../img/background/advantages-background-desktop@2x.webp")) {
+    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
-  background-color: $color-beau-blue;
 }
 
 .strengths h2 {
@@ -66,6 +69,10 @@
   text-align: left;
 }
 
+.strengths__item-title br {
+  display: none;
+}
+
 .strengths__item p {
   margin: 0;
   padding: 0;
@@ -78,18 +85,24 @@
 
 @media (max-width: ($vp-1024 - 1px)) {
   .strengths {
-    background-image: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat;
+    padding-top: 90px;
+    padding-bottom: 101px;
+    background: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
-    @supports (background-image: url("../img/background/advantages-background-tablet@1x.webp")) {
-      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat;
+    @supports (background: url("../img/background/advantages-background-tablet@1x.webp")) {
+      background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
-    @supports (background-image: url("../img/background/advantages-background-tablet@2x.webp")) {
-      background-image: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat;
+    @supports (background: url("../img/background/advantages-background-tablet@2x.webp")) {
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
   }
 
@@ -102,6 +115,25 @@
     gap: 30px;
   }
 
+  .strengths__item {
+    padding: 26px 16px 23px 20px;
+  }
+
+  .strengths__item--little-ship svg {
+    width: 21px;
+    height: 26px;
+  }
+
+  .strengths__item--double-tick svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  .strengths__item--ship svg {
+    width: 36px;
+    height: 26px;
+  }
+
   .strengths__item h3 {
     font-size: 18px;
     line-height: 25px;
@@ -110,28 +142,42 @@
 
 @media (max-width: ($vp-768 - 1px)) {
   .strengths {
-    background-image: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat;
+    padding-top: 57px;
+    padding-bottom: 68px;
+    background: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
-    @supports (background-image: url("../img/background/advantages-background-mobile@1x.webp")) {
-      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat;
+    @supports (background: url("../img/background/advantages-background-mobile@1x.webp")) {
+      background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
-    @supports (background-image: url("../img/background/advantages-background-mobile@2x.webp")) {
-      background-image: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat;
+    @supports (background: url("../img/background/advantages-background-mobile@2x.webp")) {
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
   }
 
   .strengths h2 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
 
   .strengths__list {
     grid-template-columns: 1fr;
+  }
+
+  .strengths__item {
+    padding-bottom: 19px;
+  }
+
+  .strengths__item-title br {
+    display: block;
   }
 }

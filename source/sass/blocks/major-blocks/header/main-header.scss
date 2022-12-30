@@ -1,29 +1,11 @@
 .main-header {
   width: 100%;
-  margin-top: 0;
-  margin-bottom: auto;
-  min-height: 650px;
-  display: flex;
-  flex-direction: column;
   font-size: 16px;
   line-height: 19.5px;
   color: $color-alice-blue;
-  //z-index: 10;
-  background-image: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat;
-
-  @supports (background-image: url("../img/background/central-background-desktop@1x.webp")) {
-    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat;
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat;
-  }
-
-  @supports (background-image: url("../img/background/central-background-desktop@2x.webp")) {
-    background-image: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat;
-  }
-
-  background-color: $color-prussian-blue;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main-header__inner-wrap {
@@ -36,44 +18,20 @@
 }
 
 @media (max-width: ($vp-1024 - 1px)) {
-  .main-header {
-    background-image: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat;
-
-    @supports (background-image: url("../img/background/central-background-tablet@1x.webp")) {
-      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat;
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat;
-    }
-
-    @supports (background-image: url("../img/background/central-background-tablet@2x.webp")) {
-      background-image: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat;
-    }
+  .main-header__inner-wrap {
+    padding-top: 30px;
   }
 }
 
 @media (max-width: ($vp-768 - 1px)) {
-  .main-header {
-    background-image: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat;
-
-    @supports (background-image: url("../img/background/central-background-mobile@1x.webp")) {
-      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat;
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat;
-    }
-
-    @supports (background-image: url("../img/background/central-background-mobile@2x.webp")) {
-      background-image: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat;
-    }
-  }
-
   .main-header__logo-toggle-wrap {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .main-header__inner-wrap {
+    padding-top: 20px;
   }
 
   .main-header--nav-opened .main-header__inner-wrap {

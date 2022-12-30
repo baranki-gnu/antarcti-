@@ -1,6 +1,5 @@
 .voyage {
   width: 100%;
-  margin-top: 0;
   padding-top: 120px;
   padding-bottom: 145px;
 }
@@ -46,9 +45,15 @@
 }
 
 @media (max-width: ($vp-1024 - 1px)) {
+  .voyage {
+    padding-top: 90px;
+    padding-bottom: 92px;
+  }
+
   .voyage h2 {
+    width: 220px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
     font-size: 26px;
     line-height: 36.5px;
   }
@@ -56,10 +61,17 @@
   .voyage img,
   .voyage picture {
     min-width: 324px;
+    margin-top: 5px;
+    margin-right: 5px;
   }
 }
 
 @media (max-width: ($vp-768 - 1px)) {
+  .voyage {
+    padding-top: 55px;
+    padding-bottom: 85px;
+  }
+
   .voyage img,
   .voyage picture {
     min-width: 290px;
@@ -75,14 +87,14 @@
 
   .voyage h2 {
     margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 26px;
-    line-height: 36.5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 33.5px;
   }
 
   .voyage p {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 16px;
   }
 
   .voyage img,

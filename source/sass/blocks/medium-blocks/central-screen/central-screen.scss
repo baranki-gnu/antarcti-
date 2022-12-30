@@ -1,3 +1,28 @@
+.central-screen {
+  width: 100%;
+  min-height: 650px;
+  margin-top: 0;
+  margin-bottom: auto;
+  background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat,
+  linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+
+  @supports (background: url("../img/background/central-background-desktop@1x.webp")) {
+    background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+  }
+
+  @supports (background: url("../img/background/central-background-desktop@2x.webp")) {
+    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat,
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+  }
+  box-shadow: 0px 4px  4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .central-screen__description {
   min-width: 823px;
   max-width: 973px;
@@ -10,7 +35,7 @@
 .central-screen__description h1 {
   width: 100%;
   margin: 0;
-  margin-top: 162px;
+  margin-top: 269px;
   margin-right: auto;
   margin-bottom: 12px;
   padding: 0;
@@ -31,11 +56,36 @@
   text-align: left;
 }
 
+.central-screen br {
+  display: none;
+}
+
 @media (max-width: ($vp-1024 - 1px)) {
+  .central-screen {
+    min-height: 638px;
+    background: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+
+    @supports (background: url("../img/background/central-background-tablet@1x.webp")) {
+      background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+
+    @supports (background: url("../img/background/central-background-tablet@2x.webp")) {
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+    box-shadow: none;
+  }
+
   .central-screen__description {
     min-width: 680px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 0;
   }
 
   .central-screen__description h1 {
@@ -50,13 +100,35 @@
 }
 
 @media (max-width: ($vp-768 - 1px)) {
+  .central-screen {
+    min-height: 500px;
+    background: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+
+    @supports (background: url("../img/background/central-background-mobile@1x.webp")) {
+      background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+
+    @supports (background: url("../img/background/central-background-mobile@2x.webp")) {
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat,
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    }
+  }
+
   .central-screen__description {
     min-width: 295px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .central-screen__description h1 {
+    margin-top: 175px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -64,5 +136,9 @@
   .central-screen__description p {
     font-size: 16px;
     line-height: 22.5px;
+  }
+
+  .central-screen br {
+    display: block;
   }
 }

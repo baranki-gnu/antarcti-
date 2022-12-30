@@ -1,0 +1,153 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.contacts__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contacts__map {
+  grid-column: 1/2;
+}
+
+.contacts__map img,
+.contacts__map picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contacts__text {
+  margin: 0 0 0 auto;
+  display: flex;
+  grid-column: 2/3;
+}
+
+.contacts__text-inner-wrap {
+  height: min-content;
+  max-width: 500px;
+  margin: auto auto auto 0;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.contacts__text b {
+  max-width: 500px;
+  margin: 0 auto 32px 0;
+  padding: 0;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: $color-tangaroa;
+  text-align: left;
+}
+
+.contacts__text span,
+.contacts__text a {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-tangaroa;
+  text-align: left;
+}
+
+.contacts__text a {
+  display: flex;
+  text-decoration: none;
+}
+
+.contacts__text p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+}
+
+.contacts__text a:hover span {
+  color: $color-curious-blue;
+}
+
+.contacts__text a:hover svg {
+  fill: $color-curious-blue;
+}
+
+.contacts__text br {
+  display: none;
+}
+
+.contacts__text svg {
+  margin-right: 10px;
+  display: block;
+  fill: $color-tangaroa;
+}
+
+@media (max-width: ($vp-1024 - 1px)) {
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contacts__wrap {
+    gap: 30px;
+  }
+
+  .contacts__wrap br {
+    display: none;
+  }
+
+  .contacts__map img,
+  .contacts__map picture {
+    min-width: 324px;
+  }
+
+  .contacts__address svg {
+    width: 18px;
+    height: 22px;
+  }
+}
+
+@media (max-width: ($vp-768 - 1px)) {
+  .contacts {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .contacts__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__text-inner-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .contacts__text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contacts__map {
+    order: 2;
+  }
+
+  .contacts__map img,
+  .contacts__map picture {
+    min-width: 100%;
+  }
+
+  .contacts__text span br {
+    display: block;
+  }
+
+  .contacts__text b {
+    margin-bottom: 29px;
+  }
+}
