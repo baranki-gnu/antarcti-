@@ -47,15 +47,13 @@
   }
 
   .toggle-button:hover .toggle__burger-svg,
-  .toggle-button:hover .toggle__cross
-   {
+  .toggle-button:hover .toggle__cross {
     stroke: $color-quartz;
     stroke-width: 2px;
   }
 
   .toggle-button:active .toggle__burger-svg,
-  .toggle-button:active .toggle__cross
-   {
+  .toggle-button:active .toggle__cross {
     stroke: $color-solitude;
     stroke-width: 2px;
   }

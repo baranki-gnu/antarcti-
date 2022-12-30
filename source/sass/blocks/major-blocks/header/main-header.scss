@@ -61,4 +61,33 @@
   .main-header--nav-closed .main-header__navigation {
     display: none;
   }
+
+  .main-header--nojs {
+    position: static;
+  }
+
+  .main-header--nojs .main-header__toggle {
+    display: none;
+  }
+
+  .main-header--nojs .main-header__inner-wrap {
+    width: 100%;
+    min-height: 180px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: $color-alice-blue;
+    color: $color-tangaroa;
+    position: static;
+    z-index: 10;
+  }
+
+  .main-header--nojs .main-header__navigation {
+    display: block;
+    margin-bottom: auto;
+  }
+
+  .main-header--nojs a {
+    color: $color-tangaroa;
+  }
 }

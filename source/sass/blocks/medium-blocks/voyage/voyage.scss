@@ -75,6 +75,7 @@
   .voyage img,
   .voyage picture {
     min-width: 290px;
+    margin: 0 auto;
   }
 
   .voyage__outer-wrap {
@@ -95,10 +96,5 @@
   .voyage p {
     width: 100%;
     margin-bottom: 16px;
-  }
-
-  .voyage img,
-  .voyage picture {
-    margin: 0 auto;
   }
 }

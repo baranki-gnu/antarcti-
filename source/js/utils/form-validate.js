@@ -1,14 +1,9 @@
 let formMain = document.querySelector('[data-order-form]');
-let emailInput = formMain.querySelector('[data-email-input] input');
-let telephoneInput = formMain.querySelector('[data-telephone-input] input');
-let nameInput = formMain.querySelector('[data-name-input] input');
 
 const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
 
-//pattern=/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
-//pattern=/^\d+$/;
-
-function validateEmail(input) {
+function validateEmail(formBlock) {
+  let input = formBlock.querySelector('[data-email-input] input');
   if (input) {
 
     input.addEventListener('input', () => {
@@ -33,7 +28,8 @@ function validateEmail(input) {
   }
 }
 
-function validateTelephone(input) {
+function validateTelephone(formBlock) {
+  let input = formBlock.querySelector('[data-telephone-input] input');
   if (input) {
     input.addEventListener('input', () => {
       let telephoneValue = input.value;
@@ -57,7 +53,8 @@ function validateTelephone(input) {
   }
 }
 
-function validateName(input) {
+function validateName(formBlock) {
+  let input = formBlock.querySelector('[data-name-input] input');
   if (input) {
     input.addEventListener('input', () => {
       let nameValue = input.value;
@@ -83,9 +80,11 @@ function validateName(input) {
 }
 
 function turnMailValidationOn() {
-  validateEmail(emailInput);
-  validateTelephone(telephoneInput);
-  validateName(nameInput);
+  if (formMain) {
+    validateEmail(formMain);
+    validateTelephone(formMain);
+    validateName(formMain);
+  }
 }
 
 export {turnMailValidationOn};

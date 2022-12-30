@@ -3,21 +3,21 @@
   padding-top: 112px;
   padding-bottom: 120px;
   background: url("../img/background/advantages-background-desktop@1x.jpg") center/cover no-repeat,
-  linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
   @supports (background: url("../img/background/advantages-background-desktop@1x.webp")) {
     background: url("../img/background/advantages-background-desktop@1x.webp") center/cover no-repeat,
-    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
   @media (min-resolution: 2dppx) {
     background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 
   @supports (background: url("../img/background/advantages-background-desktop@2x.webp")) {
     background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat,
-    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
   }
 }
 
@@ -88,21 +88,21 @@
     padding-top: 90px;
     padding-bottom: 101px;
     background: url("../img/background/advantages-background-tablet@1x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
     @supports (background: url("../img/background/advantages-background-tablet@1x.webp")) {
       background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
       background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @supports (background: url("../img/background/advantages-background-tablet@2x.webp")) {
       background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
   }
 
@@ -145,21 +145,21 @@
     padding-top: 57px;
     padding-bottom: 68px;
     background: url("../img/background/advantages-background-mobile@1x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
 
     @supports (background: url("../img/background/advantages-background-mobile@1x.webp")) {
       background: url("../img/background/advantages-background-mobile@1x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
       background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
 
     @supports (background: url("../img/background/advantages-background-mobile@2x.webp")) {
       background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(158, 202, 248, 1) 100%, rgba(158, 202, 248, 1) 100%) center/cover no-repeat;
     }
   }
 

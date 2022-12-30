@@ -11,13 +11,25 @@
 
 .contacts__map {
   grid-column: 1/2;
+  position: relative;
+}
+
+.contacts__const-image-wrap {
+  position: absolute;
+  width: 100%;
+  height: 306px;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 .contacts__map img,
 .contacts__map picture {
   width: 100%;
-  height: auto;
+  height: 306px;
   display: block;
+  object-fit: cover;
 }
 
 .contacts__text {
@@ -87,6 +99,14 @@
   fill: $color-tangaroa;
 }
 
+.contacts__interactive-map {
+  width: 100%;
+  min-width: 324px;
+  height: auto;
+  display: block;
+  z-index: 10;
+}
+
 @media (max-width: ($vp-1024 - 1px)) {
   .contacts {
     padding-top: 100px;
@@ -109,6 +129,10 @@
   .contacts__address svg {
     width: 18px;
     height: 22px;
+  }
+
+  .contacts__interactive-map {
+    height: 335px;
   }
 }
 

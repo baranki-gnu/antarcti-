@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {turnToggleOn} from './utils/menu-toggle';
 import {startStoringData} from './utils/form-data-storage';
 import {turnMailValidationOn} from './utils/form-validate';
+import {turnNavScrollOn} from './utils/navigation-scroll';
+import {toggleNoJsClass} from './utils/cruises-class-toggle';
 
 // ---------------------------------
 
@@ -15,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   turnToggleOn();
   startStoringData();
   turnMailValidationOn();
+  turnNavScrollOn();
+  toggleNoJsClass();
 
   // Modules
   // ---------------------------------
@@ -24,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
   });
+
 });
 
 // ---------------------------------

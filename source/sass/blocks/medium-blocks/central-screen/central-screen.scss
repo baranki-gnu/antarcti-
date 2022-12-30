@@ -4,23 +4,22 @@
   margin-top: 0;
   margin-bottom: auto;
   background: url("../img/background/central-background-desktop@1x.jpg") center/cover no-repeat,
-  linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
 
   @supports (background: url("../img/background/central-background-desktop@1x.webp")) {
     background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat,
-    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
   }
 
   @media (min-resolution: 2dppx) {
     background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
   }
 
   @supports (background: url("../img/background/central-background-desktop@2x.webp")) {
     background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat,
-    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
   }
-  box-shadow: 0px 4px  4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .central-screen__description {
@@ -64,23 +63,22 @@
   .central-screen {
     min-height: 638px;
     background: url("../img/background/central-background-tablet@1x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
 
     @supports (background: url("../img/background/central-background-tablet@1x.webp")) {
       background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
       background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
 
     @supports (background: url("../img/background/central-background-tablet@2x.webp")) {
       background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
-    box-shadow: none;
   }
 
   .central-screen__description {
@@ -103,21 +101,21 @@
   .central-screen {
     min-height: 500px;
     background: url("../img/background/central-background-mobile@1x.jpg") center/cover no-repeat,
-    linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
 
     @supports (background: url("../img/background/central-background-mobile@1x.webp")) {
       background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
 
     @media (min-resolution: 2dppx) {
       background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
 
     @supports (background: url("../img/background/central-background-mobile@2x.webp")) {
       background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat,
-      linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
+        linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
   }
 

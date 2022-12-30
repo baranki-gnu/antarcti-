@@ -14,12 +14,9 @@
 
 @media (max-width: ($vp-1024 - 1px)) {
   .footer__wrap {
-    gap: 10px;
-  }
-
-  .footer__wrap {
     padding-top: 45px;
     padding-bottom: 44px;
+    gap: 10px;
   }
 }
 
