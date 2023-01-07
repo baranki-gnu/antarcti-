@@ -2,11 +2,16 @@ let headerWrap = document.querySelector('[data-header]');
 
 function toggleMenu(headerContainer) {
   if (headerContainer) {
+    headerContainer.classList.remove('main-header--nojs');
+
     let logoLink = headerContainer.querySelector('[data-logo-link]');
     let toggleWrap = headerContainer.querySelector('[data-toggle-wrap]');
     let toggleButton = headerContainer.querySelector('[data-menu-toggle]');
 
     if (logoLink && toggleWrap && toggleButton) {
+
+      toggleWrap.classList.remove('toggle--nojs');
+      logoLink.classList.remove('logo--nojs');
 
       toggleButton.addEventListener('click', (evt) => {
         evt.preventDefault();

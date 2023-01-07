@@ -12,15 +12,30 @@
 .contacts__map {
   grid-column: 1/2;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.contacts__interactive-map {
+  width: 100%;
+  min-width: 324px;
+  height: 306px;
+  display: block;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 10;
 }
 
 .contacts__const-image-wrap {
   position: absolute;
   width: 100%;
-  height: 306px;
+  height: auto;
   display: block;
   top: 0;
   left: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
   z-index: -2;
 }
 
@@ -99,12 +114,8 @@
   fill: $color-tangaroa;
 }
 
-.contacts__interactive-map {
-  width: 100%;
-  min-width: 324px;
-  height: auto;
-  display: block;
-  z-index: 10;
+.contacts__address svg {
+  flex-shrink: 0;
 }
 
 @media (max-width: ($vp-1024 - 1px)) {
@@ -117,18 +128,35 @@
     gap: 30px;
   }
 
-  .contacts__wrap br {
+  .contacts__text-inner-wrap {
+    padding-top: 0;
+  }
+
+  .contacts__text-promt br {
     display: none;
   }
 
   .contacts__map img,
   .contacts__map picture {
     min-width: 324px;
+    height: 335px;
   }
 
   .contacts__address svg {
     width: 18px;
     height: 22px;
+  }
+
+  .contacts__text b {
+    margin-bottom: 27px;
+  }
+
+  .contacts__address br {
+    display: block;
+  }
+
+  .contacts__text svg {
+    margin-top: 3px;
   }
 
   .contacts__interactive-map {
@@ -139,12 +167,17 @@
 @media (max-width: ($vp-768 - 1px)) {
   .contacts {
     padding-top: 55px;
-    padding-bottom: 70px;
+    padding-bottom: 67px;
   }
 
   .contacts__wrap {
     display: flex;
     flex-direction: column;
+  }
+
+  .contacts__map {
+    padding-top: 5px;
+    order: 2;
   }
 
   .contacts__text-inner-wrap {
@@ -153,18 +186,20 @@
     padding-right: 0;
   }
 
+  .contacts__interactive-map {
+    min-width: 290px;
+    height: 316px;
+  }
+
   .contacts__text {
     width: 100%;
     margin: 0 auto;
   }
 
-  .contacts__map {
-    order: 2;
-  }
-
   .contacts__map img,
   .contacts__map picture {
-    min-width: 100%;
+    min-width: 290px;
+    height: 316px;
   }
 
   .contacts__text span br {

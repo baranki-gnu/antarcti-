@@ -11,23 +11,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
   <div class="wrapper">
     <!--Header-->
-    <header class="page__header main-header main-header--nojs main-header--nav-closed" data-header>
+    <header class="page__header main-header main-header--nav-closed main-header--nojs" data-header>
       <!--Для открытия/закрытия меню используется класс main-header--nav-opened и main-header--nav-closed-->
       <!--<div class="main-header__outer-wrap ">-->
       <div class="main-header__inner-wrap container">
         <div class="main-header__logo-toggle-wrap">
-          <a class="logo logo--no-js"
+          <a class="logo logo--nojs"
             data-logo-link><!--Для изменения вида лого при открытии мобильного меню использовать класс logo--black-->
             <!--<img src="img/svg/iceberg-logo.svg" width="70" height="38" alt="Круизы в Антарктику.">-->
             <svg class="logo__svg" focusable="false" width="70" height="38" aria-label="Круизы в Антарктику">
               <use xlink:href="img/sprite/sprite.svg#iceberg-logo"></use>
             </svg>
           </a>
-          <div class="main-header__toggle toggle toggle--closed" data-toggle-wrap>
+          <div class="main-header__toggle toggle toggle--closed toggle--nojs" data-toggle-wrap>
             <!--Для изменения вида кнопки используется класс toggle--opened и toggle--closed-->
             <button class="header__toggle-button toggle-button" aria-label="Открытие-закрытие меню" data-menu-toggle>
               <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
@@ -432,7 +431,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrap container">
           <div class="contacts__map">
-            <div class="contacts__interactive-map" id="YMapsID" style="width: 100%; height: 306px;"></div>
+            <div class="contacts__interactive-map" id="YMapsID"></div><!--style="width: 100%;"-->
             <div class="contacts__const-image-wrap">
               <picture>
                 <source media="(max-width: 768px)"
@@ -529,14 +528,6 @@
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=74532f13-8895-4664-8153-68a65d7ca79e&lang=ru_RU"
     type="text/javascript"></script>
-  <script type="text/javascript">
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map("YMapsID", {
-        center: [59.938635, 30.323118],
-        zoom: 16
-      });
-    });
-  </script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

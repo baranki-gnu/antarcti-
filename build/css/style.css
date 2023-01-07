@@ -912,15 +912,41 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.contacts__interactive-map {
+  width: 100%;
+  min-width: 324px;
+  height: 306px;
+  display: block;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  z-index: 10;
 }
 
 .contacts__const-image-wrap {
   position: absolute;
   width: 100%;
-  height: 306px;
+  height: auto;
   display: block;
   top: 0;
   left: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   z-index: -2;
 }
 
@@ -1010,12 +1036,9 @@ button,
   fill: #011c40;
 }
 
-.contacts__interactive-map {
-  width: 100%;
-  min-width: 324px;
-  height: auto;
-  display: block;
-  z-index: 10;
+.contacts__address svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .cruises {
@@ -1050,7 +1073,31 @@ button,
 
 .cruises__item {
   max-width: 260px;
+  height: 386px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
+  scrollbar-color: #00366f #011c40;
+  scrollbar-width: thin;
+}
+
+.cruises__item::-webkit-scrollbar {
+  width: 8px;
+  background-color: #011c40;
+}
+
+.cruises__item::-webkit-scrollbar-thumb {
+  background-color: #00366f;
+  border-radius: 3px;
+}
+
+.cruises__item::-webkit-scrollbar-thumb:hover {
+  background-color: #175da7;
 }
 
 .cruises__item h3 {
@@ -1082,7 +1129,6 @@ button,
 .cruises__item:hover,
 .cruises__item:focus-within,
 .cruises__item--no-js {
-  height: 386px;
   padding: 30px 25px 35px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1109,7 +1155,6 @@ button,
 .cruises__item:hover .cruises__inner-wrap,
 .cruises__item:focus-within .cruises__inner-wrap,
 .cruises__item--no-js .cruises__inner-wrap {
-  height: 100%;
   margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1118,6 +1163,9 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1848,18 +1896,35 @@ button,
     gap: 30px;
   }
 
-  .contacts__wrap br {
+  .contacts__text-inner-wrap {
+    padding-top: 0;
+  }
+
+  .contacts__text-promt br {
     display: none;
   }
 
   .contacts__map img,
   .contacts__map picture {
     min-width: 324px;
+    height: 335px;
   }
 
   .contacts__address svg {
     width: 18px;
     height: 22px;
+  }
+
+  .contacts__text b {
+    margin-bottom: 27px;
+  }
+
+  .contacts__address br {
+    display: block;
+  }
+
+  .contacts__text svg {
+    margin-top: 3px;
   }
 
   .contacts__interactive-map {
@@ -2297,7 +2362,7 @@ button,
 
   .contacts {
     padding-top: 55px;
-    padding-bottom: 70px;
+    padding-bottom: 67px;
   }
 
   .contacts__wrap {
@@ -2310,10 +2375,22 @@ button,
     flex-direction: column;
   }
 
+  .contacts__map {
+    padding-top: 5px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
   .contacts__text-inner-wrap {
     max-width: 100%;
     margin: 0 auto;
     padding-right: 0;
+  }
+
+  .contacts__interactive-map {
+    min-width: 290px;
+    height: 316px;
   }
 
   .contacts__text {
@@ -2321,15 +2398,10 @@ button,
     margin: 0 auto;
   }
 
-  .contacts__map {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-  }
-
   .contacts__map img,
   .contacts__map picture {
-    min-width: 100%;
+    min-width: 290px;
+    height: 316px;
   }
 
   .contacts__text span br {
@@ -2348,6 +2420,7 @@ button,
   .cruises__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    width: calc(100% - 20px);
   }
 
   .cruises h2 {
@@ -2358,6 +2431,8 @@ button,
 
   .cruises__item {
     min-width: 270px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .cruises__item:hover,
@@ -2377,6 +2452,13 @@ button,
   .cruises__item:focus-within a,
   .cruises__item--no-js a {
     margin-bottom: 5px;
+  }
+
+  .cruises__item img,
+  .cruises__item picture {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 
   .order-form {
@@ -2492,7 +2574,7 @@ button,
     fill: #011c40;
   }
 
-  .logo--no-js svg {
+  .logo--nojs svg {
     width: 42px;
     height: 22px;
     fill: #011c40;
@@ -2639,6 +2721,10 @@ button,
   .toggle-button:active .toggle__cross {
     stroke: #e3ecf6;
     stroke-width: 2px;
+  }
+
+  .toggle--nojs {
+    display: none;
   }
 
   .input-textarea-wrap textarea {
