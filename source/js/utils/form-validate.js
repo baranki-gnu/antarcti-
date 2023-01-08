@@ -67,7 +67,7 @@ function validateName(formBlock) {
         input.classList.remove('valid');
         input.classList.add('invalid');
 
-        input.setCustomValidity('Введите имя на латинице или кириллице');
+        input.setCustomValidity('Введите имя контактного лица с заглавной буквы на латинице или кириллице');
       }
 
       if (nameValue === '') {

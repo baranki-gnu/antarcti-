@@ -894,6 +894,10 @@ button,
   margin: 0;
 }
 
+.page footer {
+  margin-bottom: 0;
+}
+
 .contacts {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1227,14 +1231,6 @@ button,
   }
 }
 
-@supports (background: url("../img/background/form-background-desktop@2x.webp")) {
-  .order-form {
-    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
-    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-    background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-  }
-}
-
 .order-form__wrap {
   display: -ms-grid;
   display: grid;
@@ -1387,14 +1383,6 @@ button,
   }
 }
 
-@supports (background: url("../img/background/advantages-background-desktop@2x.webp")) {
-  .strengths {
-    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
-    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-    background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-  }
-}
-
 .strengths h2 {
   margin: 0 auto 47px auto;
   padding: 0;
@@ -1493,14 +1481,6 @@ button,
     background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
     background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     background: url("../img/background/central-background-desktop@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-  }
-}
-
-@supports (background: url("../img/background/central-background-desktop@2x.webp")) {
-  .central-screen {
-    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
-    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-    background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
 }
 
@@ -1988,14 +1968,6 @@ button,
     }
 }
 
-@supports (background: url("../img/background/form-background-tablet@2x.webp")) {
-    .order-form {
-      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
-      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-    }
-}
-
   .order-form__wrap {
     display: block;
   }
@@ -2041,14 +2013,6 @@ button,
       background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
       background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
       background: url("../img/background/advantages-background-tablet@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-    }
-}
-
-@supports (background: url("../img/background/advantages-background-tablet@2x.webp")) {
-    .strengths {
-      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
-      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     }
 }
 
@@ -2108,14 +2072,6 @@ button,
       background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
       background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
       background: url("../img/background/central-background-tablet@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-    }
-}
-
-@supports (background: url("../img/background/central-background-tablet@2x.webp")) {
-    .central-screen {
-      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
-      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     }
 }
 
@@ -2183,17 +2139,41 @@ button,
     background: url("../img/background/form-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
+@supports (background: url("../img/background/form-background-tablet@2x.webp")) {
+    .order-form {
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/form-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
   .strengths {
     background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
     background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     background: url("../img/background/advantages-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
+@supports (background: url("../img/background/advantages-background-tablet@2x.webp")) {
+    .strengths {
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
   .central-screen {
     background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
     background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     background: url("../img/background/central-background-tablet@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
+
+@supports (background: url("../img/background/central-background-tablet@2x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-tablet@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
 }
 
 @media (max-width: 767px) {
@@ -2535,14 +2515,6 @@ button,
     }
 }
 
-@supports (background: url("../img/background/advantages-background-mobile@2x.webp")) {
-    .strengths {
-      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
-      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
-    }
-}
-
   .strengths h2 {
     margin-bottom: 30px;
     font-size: 24px;
@@ -2592,14 +2564,6 @@ button,
       background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
       background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
       background: url("../img/background/central-background-mobile@1x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-    }
-}
-
-@supports (background: url("../img/background/central-background-mobile@2x.webp")) {
-    .central-screen {
-      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
-      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
-      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     }
 }
 
@@ -2739,11 +2703,27 @@ button,
     background: url("../img/background/advantages-background-mobile@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
+@supports (background: url("../img/background/advantages-background-mobile@2x.webp")) {
+    .strengths {
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
   .central-screen {
     background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
     background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     background: url("../img/background/central-background-mobile@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
+
+@supports (background: url("../img/background/central-background-mobile@2x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
 }
 
 @media (hover: hover) {
@@ -2759,15 +2739,39 @@ button,
     background: url("../img/background/form-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
+@supports (background: url("../img/background/form-background-desktop@2x.webp")) {
+    .order-form {
+      background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/form-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
   .strengths {
     background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
     background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
     background: url("../img/background/advantages-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
   }
 
+@supports (background: url("../img/background/advantages-background-desktop@2x.webp")) {
+    .strengths {
+      background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(158, 202, 248)), to(rgb(158, 202, 248))) center/cover no-repeat;
+      background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+      background: url("../img/background/advantages-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(158, 202, 248) 100%, rgb(158, 202, 248) 100%) center/cover no-repeat;
+    }
+}
+
   .central-screen {
     background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
     background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     background: url("../img/background/central-background-desktop@2x.jpg") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
   }
+
+@supports (background: url("../img/background/central-background-desktop@2x.webp")) {
+    .central-screen {
+      background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgb(0, 61, 120)), to(rgb(0, 61, 120))) center/cover no-repeat;
+      background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, -o-linear-gradient(top, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+      background: url("../img/background/central-background-desktop@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
+    }
+}
 }
