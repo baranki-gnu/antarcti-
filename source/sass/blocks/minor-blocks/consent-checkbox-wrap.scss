@@ -51,17 +51,17 @@
 }
 
 .consent-checkbox-wrap:hover b,
-.consent-checkbox-wrap input:focus b,
-.consent-checkbox-wrap input:focus-within b,
-.consent-checkbox-wrap input:focus-visible b,
+.consent-checkbox-wrap input:focus ~ b,
+.consent-checkbox-wrap input:focus-within ~ b,
+.consent-checkbox-wrap input:focus-visible ~ b,
 .consent-checkbox-wrap input:active b {
   color: $color-curious-blue;
 }
 
 .consent-checkbox-wrap:hover span,
-.consent-checkbox-wrap input:focus span,
-.consent-checkbox-wrap input:focus-within span,
-.consent-checkbox-wrap input:focus-visible span,
+.consent-checkbox-wrap input:focus + span,
+.consent-checkbox-wrap input:focus-within + span,
+.consent-checkbox-wrap input:focus-visible + span,
 .consent-checkbox-wrap input:active span {
   border: 2px solid $color-prussian-blue;
 }
