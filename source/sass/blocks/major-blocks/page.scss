@@ -12,8 +12,19 @@
   margin: 0;
 }
 
+.page .wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page main {
+  flex: 1 0 auto;
+}
+
 .page footer {
   margin-bottom: 0;
+  flex: 0 0 auto;
 }
 
 @media (max-width: ($vp-768 - 1px)) {
