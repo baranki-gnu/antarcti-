@@ -20,6 +20,7 @@
         linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
     }
   }
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .central-screen__description {
@@ -79,6 +80,7 @@
           linear-gradient(180deg, rgba(0, 61, 120, 1) 100%, rgba(0, 61, 120, 1) 100%) center/cover no-repeat;
       }
     }
+    box-shadow: none;
   }
 
   .central-screen__description {

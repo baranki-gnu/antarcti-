@@ -42,7 +42,7 @@ const createWebp = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
+      .pipe(webp({quality: 80}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
@@ -52,7 +52,7 @@ const optimizeImages = () =>
       .pipe(
           imagemin([
             imagemin.optipng({optimizationLevel: 3}),
-            imagemin.mozjpeg({quality: 75, progressive: true})
+            imagemin.mozjpeg({quality: 65, progressive: true})
           ])
       )
       .pipe(gulp.dest('build/img'));

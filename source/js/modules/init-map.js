@@ -4,6 +4,7 @@ if (document.querySelector('#YMapsID')) {
     let myMap = new window.ymaps.Map('YMapsID', {
       center: [59.937809, 30.322777],
       zoom: 15,
+      controls: ['zoomControl'],
     }, {
       searchControlProvider: 'yandex#search',
     });
