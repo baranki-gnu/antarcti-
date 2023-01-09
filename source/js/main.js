@@ -5,7 +5,7 @@ import {startStoringData} from './utils/form-data-storage';
 import {turnMailValidationOn} from './utils/form-validate';
 import {turnNavScrollOn} from './utils/navigation-scroll';
 import {toggleNoJsClass} from './utils/cruises-class-toggle';
-//import './modules/init-map.js';
+import './modules/init-map.js';
 
 // ---------------------------------
 

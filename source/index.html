@@ -9,9 +9,6 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/icon-180.png"><!-- 180×180 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -141,7 +138,7 @@
           <h2 class="cruises__title">Ближайшие круизы</h2>
           <ul class="cruises__list">
             <li class="cruises__item cruises__item--no-js" data-cruise-item>
-              <!--Для проверки PP внутри карточки подставить класс .cruises__item--no-js-->
+              <!--Для проверки PP внутри карточки подставить класс .cruises__item--check -->
               <h3 class="cruises__item-title">Круиз “Астория”</h3>
               <picture>
                 <source media="(max-width: 768px)"
@@ -411,7 +408,7 @@
                 <label class="form__email-field-label">
                   <span class="visually-hidden">Введите e-mail</span>
                   <input type="email" placeholder="Email" name="user-email"
-                    required><!-- oninput="validateEmail(this)"-->
+                    required>
                 </label>
               </div>
               <div class="form__consent-checkbox consent-checkbox-wrap">

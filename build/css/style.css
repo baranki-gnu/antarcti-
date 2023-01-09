@@ -1121,7 +1121,7 @@ button,
   position: absolute;
   bottom: 5px;
   left: 30px;
-  z-index: 5;
+  z-index: 15;
 }
 
 .cruises__item img,
@@ -1130,18 +1130,21 @@ button,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  z-index: 0;
+  z-index: 10;
 }
 
 .cruises__item .cruises__inner-wrap {
-  visibility: hidden;
-  height: 0;
+  visibility: visible;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .cruises__item:hover,
 .cruises__item:focus,
 .cruises__item:focus-within,
-.cruises__item--no-js {
+.cruises__item--check {
   height: auto;
   padding: 30px 25px 35px 25px;
   visibility: visible;
@@ -1164,15 +1167,15 @@ button,
 .cruises__item:focus picture,
 .cruises__item:focus-within img,
 .cruises__item:focus-within picture,
-.cruises__item--no-js img,
-.cruises__item--no-js picture {
+.cruises__item--check img,
+.cruises__item--check picture {
   display: none;
 }
 
 .cruises__item:hover .cruises__inner-wrap,
 .cruises__item:focus .cruises__inner-wrap,
 .cruises__item:focus-within .cruises__inner-wrap,
-.cruises__item--no-js .cruises__inner-wrap {
+.cruises__item--check .cruises__inner-wrap {
   margin-bottom: 0;
   visibility: visible;
   display: -webkit-box;
@@ -1188,12 +1191,14 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  overflow: visible;
+  position: relative;
 }
 
 .cruises__item:hover h3,
 .cruises__item:focus h3,
 .cruises__item:focus-within h3,
-.cruises__item--no-js h3 {
+.cruises__item--check h3 {
   margin: 0 auto 15px 0;
   position: static;
 }
@@ -1201,7 +1206,7 @@ button,
 .cruises__item:hover dl,
 .cruises__item:focus dl,
 .cruises__item:focus-within dl,
-.cruises__item--no-js dl {
+.cruises__item--check dl {
   margin: 0 0 auto 0;
   padding: 0;
 }
@@ -1209,7 +1214,7 @@ button,
 .cruises__item:hover dt,
 .cruises__item:focus dt,
 .cruises__item:focus-within dt,
-.cruises__item--no-js dt {
+.cruises__item--check dt {
   margin: 0 auto 0 0;
   font-size: 14px;
   font-weight: 500;
@@ -1221,7 +1226,7 @@ button,
 .cruises__item:hover dd,
 .cruises__item:focus dd,
 .cruises__item:focus-within dd,
-.cruises__item--no-js dd {
+.cruises__item--check dd {
   margin: 0 auto 12px 0;
   font-size: 14px;
   font-weight: 400;
@@ -1976,13 +1981,14 @@ button,
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    aspect-ratio: 0.8;
     z-index: 0;
   }
 
   .cruises__item:hover,
   .cruises__item:focus,
   .cruises__item:focus-within,
-  .cruises__item--no-js {
+  .cruises__item--check {
     padding: 30px 35px 35px 35px;
   }
 
@@ -2457,14 +2463,14 @@ button,
     min-width: 270px;
     width: 100%;
     max-width: 100%;
-    max-height: 386px;
-    aspect-ratio: 0.69;
+    min-height: 386px;
+    aspect-ratio: 0.7;
   }
 
   .cruises__item:hover,
   .cruises__item:focus,
   .cruises__item:focus-within,
-  .cruises__item--no-js {
+  .cruises__item--check {
     padding: 30px 25px;
   }
 
@@ -2478,7 +2484,7 @@ button,
   .cruises__item:hover a,
   .cruises__item:focus a,
   .cruises__item:focus-within a,
-  .cruises__item--no-js a {
+  .cruises__item--check a {
     margin-bottom: 5px;
   }
 
@@ -2486,7 +2492,7 @@ button,
   .cruises__item picture {
     width: 100%;
     height: auto;
-    max-height: 100%;
+    aspect-ratio: 0.7;
   }
 
   .order-form {
