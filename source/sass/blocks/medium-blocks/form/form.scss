@@ -1,6 +1,6 @@
 .form {
   width: 403px;
-  padding: 45px 50px 50px 50px;
+  padding: 45px 49px 50px 49px;
   display: flex;
   flex-direction: column;
   background-color: $color-tangaroa;
@@ -29,7 +29,9 @@
 }
 
 .form button {
-  width: 100%;
+  width: calc(100% - 2px);
+  margin-left: auto;
+  margin-right: auto;
   padding: 11px;
   font-family: $family-montserrat;
   font-size: 14px;
@@ -81,6 +83,7 @@
   }
 
   .form button {
+    width: 100%;
     margin-bottom: 5px;
   }
 

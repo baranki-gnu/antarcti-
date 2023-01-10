@@ -385,35 +385,35 @@ template {
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 *,
@@ -1314,7 +1314,7 @@ button,
 
 .form {
   width: 403px;
-  padding: 45px 50px 50px 50px;
+  padding: 45px 49px 50px 49px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1349,7 +1349,9 @@ button,
 }
 
 .form button {
-  width: 100%;
+  width: calc(100% - 2px);
+  margin-left: auto;
+  margin-right: auto;
   padding: 11px;
   font-family: "Montserrat", sans-serif, "Arial";
   font-size: 14px;
@@ -1656,6 +1658,7 @@ button,
 
 .input-textarea-wrap {
   position: relative;
+  padding-left: 2px;
 }
 
 .input-textarea-wrap input,
@@ -1754,6 +1757,7 @@ button,
 .consent-checkbox-wrap {
   width: 100%;
   padding-top: 5px;
+  padding-left: 2px;
   position: relative;
 }
 
@@ -1785,7 +1789,7 @@ button,
   width: 18px;
   height: 18px;
   top: 0;
-  left: 0;
+  left: 2px;
   background-color: #f9fbfd;
   content: "";
   position: absolute;
@@ -1982,7 +1986,6 @@ button,
     -o-object-fit: cover;
     object-fit: cover;
     aspect-ratio: 0.8;
-    z-index: 0;
   }
 
   .cruises__item:hover,
@@ -2535,6 +2538,7 @@ button,
   }
 
   .form button {
+    width: 100%;
     margin-bottom: 5px;
   }
 
@@ -2745,8 +2749,8 @@ button,
     display: none;
   }
 
-  .input-textarea-wrap textarea {
-    padding-top: 24px;
+  .input-textarea-wrap {
+    padding-left: 0;
   }
 }
 

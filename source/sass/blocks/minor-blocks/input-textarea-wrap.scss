@@ -1,5 +1,6 @@
 .input-textarea-wrap {
   position: relative;
+  padding-left: 2px;
 }
 
 .input-textarea-wrap input,
@@ -57,14 +58,8 @@
   color: $color-scarlett;
 }
 
-//@media (max-width: ($vp-1024 - 1px)) {
-//  .input-textarea-wrap textarea {
-//    padding-top: 30px;
-//  }
-//}
-
 @media (max-width: ($vp-768 - 1px)) {
-  .input-textarea-wrap textarea {
-    padding-top: 24px;
+  .input-textarea-wrap {
+    padding-left: 0;
   }
 }
