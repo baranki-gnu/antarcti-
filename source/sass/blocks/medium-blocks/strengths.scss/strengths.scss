@@ -116,7 +116,7 @@
   }
 
   .strengths__item {
-    padding: 26px 16px 23px 20px;
+    padding: 26px 16px 20px 20px;
   }
 
   .strengths__item--little-ship svg {
@@ -137,6 +137,10 @@
   .strengths__item h3 {
     font-size: 18px;
     line-height: 25px;
+  }
+
+  .strengths__item p {
+    line-height: 20px;
   }
 }
 
@@ -175,6 +179,10 @@
 
   .strengths__item {
     padding-bottom: 19px;
+  }
+
+  .strengths__item p {
+    line-height: 19.5px;
   }
 
   .strengths__item-title br {
