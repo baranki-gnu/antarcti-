@@ -136,7 +136,10 @@
   }
 
   .order-form h2 {
-    width: min-content;
+    width: 100%;
+    max-width: 523px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 11px;
     padding-right: 10px;
     padding-left: 10px;
@@ -145,13 +148,19 @@
   }
 
   .order-form p {
+    width: 100%;
+    max-width: 523px;
     margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 16px;
     line-height: 22px;
   }
+}
 
+@media (max-width: 373px) {
   .order-form br {
     display: block;
   }

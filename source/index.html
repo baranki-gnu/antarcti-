@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" data-page>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,6 +20,8 @@
     <!--Header-->
     <header class="page__header main-header main-header--nav-closed main-header--nojs" data-header>
       <!--Для открытия/закрытия меню используется класс main-header--nav-opened и main-header--nav-closed-->
+      <div class="main-header__page-overlay" data-page-overlay></div>
+      <div class="main-header__focus-trap" tabIndex="0"></div>
       <div class="main-header__inner-wrap container">
         <div class="main-header__logo-toggle-wrap">
           <a class="logo logo--nojs"
@@ -43,7 +45,7 @@
         </div>
         <!--Navigation-->
         <nav class="main-header__navigation user-navigation" data-navigation>
-          <ul class="user-navigation__list">
+          <ul class="main-header__navigation-list user-navigation__list">
             <li class="user-navigation__item">
               <a class="user-navigation__link" href="#" data-strengths-link>Преимущества</a>
             </li>
@@ -59,6 +61,7 @@
           </ul>
         </nav>
       </div>
+      <div class="main-header__focus-trap" tabIndex="0"></div>
     </header>
     <!--Main-->
     <main class="page__main main-content">
@@ -405,7 +408,7 @@
               <div class="form__telephone-field input-textarea-wrap" data-telephone-input>
                 <label class="form__telephone-field-label">
                   <span class="visually-hidden">Введите телефон</span>
-                  <input type="tel" placeholder="Телефон" name="user-telephone" maxlength="11" required>
+                  <input type="tel" placeholder="Телефон" name="user-telephone" required>
                 </label>
               </div>
               <div class="form__email-field input-textarea-wrap" data-email-input>

@@ -85,15 +85,18 @@
 }
 
 .contacts__text a {
+  width: max-content;
   display: flex;
   text-decoration: none;
 }
 
 .contacts__text p {
+  max-width: 100%;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts__text a:hover span {

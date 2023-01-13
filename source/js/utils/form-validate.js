@@ -2,6 +2,8 @@ let formMain = document.querySelector('[data-order-form]');
 
 const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
 
+const phonePattern = /^((\d|\+\d)[\- ]?)?(\(?\d{1,}\)?[\- ]?)?[\d\- ]*$/;
+
 function validateEmail(formBlock) {
   let input = formBlock.querySelector('[data-email-input] input');
   if (input) {
@@ -34,7 +36,7 @@ function validateTelephone(formBlock) {
     input.addEventListener('input', () => {
       let telephoneValue = input.value;
 
-      if (telephoneValue.match(/^8\d{10}/)) {
+      if (telephoneValue.match(phonePattern)) {
         input.classList.remove('invalid');
         input.classList.add('valid');
         input.setCustomValidity('');
@@ -42,7 +44,7 @@ function validateTelephone(formBlock) {
         input.classList.remove('valid');
         input.classList.add('invalid');
 
-        input.setCustomValidity('Введите 11-значный номер телефона, начинающийся с цифры 8');
+        input.setCustomValidity('Введите корректный номер телефона');
       }
 
       if (telephoneValue === '') {
@@ -59,7 +61,7 @@ function validateName(formBlock) {
     input.addEventListener('input', () => {
       let nameValue = input.value;
 
-      if (nameValue.match(/^[А-Я]{1,}|[A-Z]{1,}/)) {
+      if (nameValue.match(/^[А-Яа-я]{1,}|[A-Za-z]{1,}/)) {
         input.classList.remove('invalid');
         input.classList.add('valid');
         input.setCustomValidity('');
@@ -67,7 +69,7 @@ function validateName(formBlock) {
         input.classList.remove('valid');
         input.classList.add('invalid');
 
-        input.setCustomValidity('Введите имя контактного лица с заглавной буквы на латинице или кириллице');
+        input.setCustomValidity('Введите имя контактного лица на латинице или кириллице');
       }
 
       if (nameValue === '') {

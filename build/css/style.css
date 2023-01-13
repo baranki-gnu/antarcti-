@@ -804,6 +804,10 @@ button,
   justify-content: space-between;
 }
 
+.main-header__focus-trap {
+  display: none;
+}
+
 .main-content {
   width: 100%;
   margin-top: 0;
@@ -822,7 +826,7 @@ button,
 .footer__wrap {
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,12 +837,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: calc(100% - 130px);
+}
+
+.user-navigation--bottom {
+  max-width: calc(100% - 196px);
 }
 
 .user-navigation__list {
   margin: auto 0 0 auto;
   padding: 0;
-  padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -851,8 +859,14 @@ button,
   list-style-type: none;
 }
 
+.user-navigation--bottom .user-navigation__list {
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+
 .user-navigation__item {
   margin-left: 33px;
+  padding-bottom: 10px;
 }
 
 .user-navigation__item a {
@@ -868,12 +882,12 @@ button,
   color: #f9fbfd;
 }
 
-.user-navigation--bottom .user-navigation__item:first-child {
+.user-navigation__item:first-child {
   margin-left: 25px;
 }
 
-.user-navigation--bottom .user-navigation__list {
-  padding-bottom: 5px;
+.user-navigation--bottom {
+  margin-right: 25px;
 }
 
 .user-navigation__item a:hover {
@@ -1012,6 +1026,9 @@ button,
 }
 
 .contacts__text a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,12 +1036,15 @@ button,
 }
 
 .contacts__text p {
+  max-width: 100%;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .contacts__text a:hover span {
@@ -1093,22 +1113,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  scrollbar-color: #00366f #011c40;
-  scrollbar-width: thin;
-}
-
-.cruises__item::-webkit-scrollbar {
-  width: 8px;
-  background-color: #011c40;
-}
-
-.cruises__item::-webkit-scrollbar-thumb {
-  background-color: #00366f;
-  border-radius: 3px;
-}
-
-.cruises__item::-webkit-scrollbar-thumb:hover {
-  background-color: #175da7;
+  overflow-y: hidden;
 }
 
 .cruises__item h3 {
@@ -1139,6 +1144,20 @@ button,
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.cruises__inner-wrap::-webkit-scrollbar {
+  width: 8px;
+  background-color: #011c40;
+}
+
+.cruises__inner-wrap::-webkit-scrollbar-thumb {
+  background-color: #00366f;
+  border-radius: 3px;
+}
+
+.cruises__inner-wrap::-webkit-scrollbar-thumb:hover {
+  background-color: #175da7;
 }
 
 .cruises__item:hover,
@@ -1193,6 +1212,9 @@ button,
   justify-content: space-between;
   overflow: visible;
   position: relative;
+  overflow-y: auto;
+  scrollbar-color: #00366f #011c40;
+  scrollbar-width: thin;
 }
 
 .cruises__item:hover h3,
@@ -1544,6 +1566,7 @@ button,
 .central-screen__description p {
   margin: 0;
   padding: 0;
+  padding-bottom: 50px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24.5px;
@@ -1882,8 +1905,20 @@ button,
 
   .footer__wrap {
     padding-top: 45px;
-    padding-bottom: 44px;
+    padding-bottom: 40px;
     gap: 10px;
+  }
+
+  .user-navigation {
+    max-width: calc(100% - 100px);
+  }
+
+  .user-navigation--bottom {
+    max-width: calc(100% - 135px);
+  }
+
+  .user-navigation--bottom .user-navigation__list {
+    margin-top: 0;
   }
 
   .user-navigation__item a {
@@ -2269,7 +2304,8 @@ button,
 
   .main-header--nav-opened .main-header__inner-wrap {
     width: calc(100% - 35px);
-    min-height: 526px;
+    min-width: 285px;
+    min-height: 568px;
     padding-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2282,18 +2318,48 @@ button,
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 20;
+  }
+
+  .main-header__page-overlay {
+    display: none;
+  }
+
+  .main-header--nav-opened .main-header__page-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 43, 102, 0.5);
+    display: block;
     z-index: 10;
   }
 
+  .main-header--nav-opened .main-header__focus-trap {
+    display: block;
+  }
+
   .main-header--nav-opened .main-header__logo-toggle-wrap {
-    margin-bottom: 33px;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-bottom: 43px;
   }
 
   .main-header--nav-opened .main-header__navigation {
     display: block;
     margin-bottom: auto;
+  }
+
+  .main-header--nav-opened .main-header__navigation-list {
+    margin: 0 auto 0 0;
+  }
+
+  .main-header--nav-opened li {
+    margin-left: 10px;
+    margin-bottom: 28px;
+  }
+
+  .main-header--nav-opened li:first-child {
+    margin-left: 10px;
   }
 
   .main-header--nav-closed .main-header__navigation {
@@ -2334,9 +2400,13 @@ button,
     color: #011c40;
   }
 
+  .main-header--nojs .main-header__focus-trap {
+    display: none;
+  }
+
   .footer__wrap {
     padding-top: 40px;
-    padding-bottom: 31px;
+    padding-bottom: 36px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2376,6 +2446,7 @@ button,
 
   .user-navigation--bottom .user-navigation__item {
     margin: 0 auto 0 0;
+    padding-bottom: 0;
   }
 
   .user-navigation--bottom .user-navigation__item:first-child {
@@ -2508,9 +2579,10 @@ button,
   }
 
   .order-form h2 {
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+    width: 100%;
+    max-width: 523px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 11px;
     padding-right: 10px;
     padding-left: 10px;
@@ -2519,15 +2591,15 @@ button,
   }
 
   .order-form p {
+    width: 100%;
+    max-width: 523px;
     margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
     padding-right: 10px;
     padding-left: 10px;
     font-size: 16px;
     line-height: 22px;
-  }
-
-  .order-form br {
-    display: block;
   }
 
   .form {
@@ -2790,6 +2862,12 @@ button,
       background: url("../img/background/central-background-mobile@2x.webp") center/cover no-repeat, linear-gradient(180deg, rgb(0, 61, 120) 100%, rgb(0, 61, 120) 100%) center/cover no-repeat;
     }
 }
+}
+
+@media (max-width: 373px) {
+  .order-form br {
+    display: block;
+  }
 }
 
 @media (hover: hover) {
