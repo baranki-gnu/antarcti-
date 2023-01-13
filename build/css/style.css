@@ -840,10 +840,6 @@ button,
   max-width: calc(100% - 130px);
 }
 
-.user-navigation--bottom {
-  max-width: calc(100% - 196px);
-}
-
 .user-navigation__list {
   margin: auto 0 0 auto;
   padding: 0;
@@ -887,6 +883,7 @@ button,
 }
 
 .user-navigation--bottom {
+  max-width: calc(100% - 196px);
   margin-right: 25px;
 }
 
@@ -2356,6 +2353,7 @@ button,
   .main-header--nav-opened li {
     margin-left: 10px;
     margin-bottom: 28px;
+    padding-bottom: 0;
   }
 
   .main-header--nav-opened li:first-child {

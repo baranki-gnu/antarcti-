@@ -44,6 +44,7 @@ function openMenu() {
 
     trapMenuFocus(headerBlock);
     document.addEventListener('keydown', onMenuEscKeydown);
+    toggleButton.removeEventListener('click', openMenu);
     toggleButton.addEventListener('click', closeMenu);
   }
 }
@@ -59,6 +60,8 @@ function closeMenu() {
     unlockScroll();
     trapMenuFocus(headerBlock).onClose();
     document.removeEventListener('keydown', onMenuEscKeydown);
+    toggleButton.addEventListener('click', openMenu);
+    toggleButton.removeEventListener('click', closeMenu);
   }
 }
 
