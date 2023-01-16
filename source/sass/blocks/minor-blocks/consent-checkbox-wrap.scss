@@ -70,3 +70,9 @@
 .consent-checkbox-wrap input:focus + span {
   outline: 2px solid $color-tangaroa;
 }
+
+@media (max-width: ($vp-1024 - 1px)) {
+  .consent-checkbox-wrap {
+    padding-top: 4px;
+  }
+}

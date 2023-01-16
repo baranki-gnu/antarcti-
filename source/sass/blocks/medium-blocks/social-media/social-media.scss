@@ -8,12 +8,27 @@
   padding: 10px 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 27px;
+  //gap: 27px;
+  gap: 20px;
   list-style-type: none;
 }
 
 .social-media__item svg {
   fill: $color-alice-blue;
+}
+
+.social-media__item:nth-child(2n) {
+  margin: 0 auto;
+}
+
+.social-media__item:nth-child(4n) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.social-media__item:nth-child(3n) {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .social-media__link:hover svg,

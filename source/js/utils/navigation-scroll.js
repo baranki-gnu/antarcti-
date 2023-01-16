@@ -32,4 +32,4 @@ function turnNavScrollOn() {
   navigationScroll(navBar);
 }
 
-export {turnNavScrollOn};
+export {turnNavScrollOn, scrollToBlock};

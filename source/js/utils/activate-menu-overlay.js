@@ -8,6 +8,8 @@ let toggleWrap = headerBlock.querySelector('[data-toggle-wrap]');
 let toggleButton = headerBlock.querySelector('[data-menu-toggle]');
 let menuOverlay = document.querySelector('[data-page-overlay]');
 
+let navigationLinks = document.querySelectorAll('[data-navigation] a');
+
 function lockScroll() {
   if (bodyBlock && headerBlock) {
     if (headerBlock.classList.contains('main-header--nav-opened')) {
@@ -28,6 +30,18 @@ const isEscapeKey = (evt) => {
   return evt.key === 'Escape';
 };
 
+function scrollToBlockMobile(link) {
+  if (link.dataset.linkTo) {
+    let targetName = link.dataset.linkTo;
+    let targetNameData = '[data-' + targetName + ']';
+    let targetBlock = document.querySelector(targetNameData);
+    targetBlock.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  }
+}
+
 function openMenu() {
   if (headerBlock) {
 
@@ -37,7 +51,7 @@ function openMenu() {
     if (logoLink && toggleWrap && toggleButton) {
       toggleWrap.classList.remove('toggle--closed');
       toggleWrap.classList.add('toggle--opened');
-      logoLink.classList.toggle('logo--black');
+      logoLink.classList.add('logo--black');
     }
 
     lockScroll();
@@ -46,6 +60,11 @@ function openMenu() {
     document.addEventListener('keydown', onMenuEscKeydown);
     toggleButton.removeEventListener('click', openMenu);
     toggleButton.addEventListener('click', closeMenu);
+
+    navigationLinks.forEach((link) => link.addEventListener('click', () => {
+      closeMenu();
+      scrollToBlockMobile(link);
+    }));
   }
 }
 
@@ -55,13 +74,18 @@ function closeMenu() {
     headerBlock.classList.add('main-header--nav-closed');
     toggleWrap.classList.remove('toggle--opened');
     toggleWrap.classList.add('toggle--closed');
-    logoLink.classList.toggle('logo--black');
+    logoLink.classList.remove('logo--black');
 
     unlockScroll();
     trapMenuFocus(headerBlock).onClose();
     document.removeEventListener('keydown', onMenuEscKeydown);
     toggleButton.addEventListener('click', openMenu);
     toggleButton.removeEventListener('click', closeMenu);
+
+    navigationLinks.forEach((link) => link.removeEventListener('click', () => {
+      closeMenu();
+      scrollToBlockMobile(link);
+    }));
   }
 }
 

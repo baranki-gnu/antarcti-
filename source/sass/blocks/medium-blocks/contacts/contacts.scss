@@ -58,7 +58,7 @@
   max-width: 500px;
   margin: auto auto auto 0;
   padding-right: 10px;
-  padding-top: 2px;
+  padding-top: 22px;
 }
 
 .contacts__text b {
@@ -86,6 +86,10 @@
 
 .contacts__text a {
   width: max-content;
+  //new
+  margin-bottom: 20px;
+
+  //
   display: flex;
   text-decoration: none;
 }
@@ -132,7 +136,7 @@
   }
 
   .contacts__text-inner-wrap {
-    padding-top: 0;
+    padding-top: 10px;
   }
 
   .contacts__text-promt br {
@@ -159,7 +163,7 @@
   }
 
   .contacts__text svg {
-    margin-top: 3px;
+    margin-top: 5px;
   }
 
   .contacts__interactive-map {
@@ -169,8 +173,8 @@
 
 @media (max-width: ($vp-768 - 1px)) {
   .contacts {
-    padding-top: 55px;
-    padding-bottom: 67px;
+    padding-top: 45px;
+    padding-bottom: 47px;
   }
 
   .contacts__wrap {
