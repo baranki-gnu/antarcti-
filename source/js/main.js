@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {startStoringData} from './utils/form-data-storage';
-import {turnMailValidationOn} from './utils/form-validate';
+import {turnFormValidationOn} from './utils/form-validate';
 import {turnNavScrollOn} from './utils/navigation-scroll';
 import {callMenuFunctions} from './utils/activate-menu-overlay';
 import './modules/init-map.js';
@@ -15,8 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   callMenuFunctions();
-  startStoringData();
-  turnMailValidationOn();
   turnNavScrollOn();
 
   // Modules
@@ -26,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    startStoringData();
+    turnFormValidationOn();
   });
 
 });

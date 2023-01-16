@@ -81,7 +81,7 @@ function validateName(formBlock) {
   }
 }
 
-function turnMailValidationOn() {
+function turnFormValidationOn() {
   if (formMain) {
     validateEmail(formMain);
     validateTelephone(formMain);
@@ -89,4 +89,4 @@ function turnMailValidationOn() {
   }
 }
 
-export {turnMailValidationOn};
+export {turnFormValidationOn};

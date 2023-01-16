@@ -86,10 +86,7 @@
 
 .contacts__text a {
   width: max-content;
-  //new
   margin-bottom: 20px;
-
-  //
   display: flex;
   text-decoration: none;
 }
@@ -136,7 +133,7 @@
   }
 
   .contacts__text-inner-wrap {
-    padding-top: 10px;
+    padding-top: 12px;
   }
 
   .contacts__text-promt br {
@@ -174,7 +171,7 @@
 @media (max-width: ($vp-768 - 1px)) {
   .contacts {
     padding-top: 45px;
-    padding-bottom: 47px;
+    padding-bottom: 45px;
   }
 
   .contacts__wrap {

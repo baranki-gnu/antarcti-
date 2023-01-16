@@ -41,7 +41,6 @@
   .main-header--nav-opened .main-header__inner-wrap {
     width: calc(100% - 35px);
     min-width: 285px;
-    //min-height: 568px;
     height: 100vh;
     padding-top: 20px;
     display: flex;
@@ -51,6 +50,23 @@
     top: 0;
     right: 0;
     z-index: 20;
+    overflow-y: auto;
+    scrollbar-color: $color-curious-blue $color-quartz;
+    scrollbar-width: thin;
+  }
+
+  .main-header--nav-opened .main-header__inner-wrap::-webkit-scrollbar {
+    width: 8px;
+    background-color: $color-quartz;
+  }
+
+  .main-header--nav-opened .main-header__inner-wrap::-webkit-scrollbar-thumb {
+    background-color: $color-curious-blue;
+    border-radius: 3px;
+  }
+
+  .main-header--nav-opened .main-header__inner-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: $color-denim;
   }
 
   .main-header__page-overlay {
@@ -83,23 +99,6 @@
 
   .main-header--nav-opened .main-header__navigation-list {
     margin: 0 auto 0 0;
-    overflow-y: auto;
-    scrollbar-color: $color-curious-blue $color-quartz;
-    scrollbar-width: thin;
-  }
-
-  .main-header--nav-opened .main-header__navigation-list::-webkit-scrollbar {
-    width: 8px;
-    background-color: $color-quartz;
-  }
-
-  .main-header--nav-opened .main-header__navigation-list::-webkit-scrollbar-thumb {
-    background-color: $color-curious-blue;
-    border-radius: 3px;
-  }
-
-  .main-header--nav-opened .main-header__navigation-list::-webkit-scrollbar-thumb:hover {
-    background-color: $color-denim;
   }
 
   .main-header--nav-opened li {
