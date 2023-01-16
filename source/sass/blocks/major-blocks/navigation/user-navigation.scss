@@ -41,7 +41,7 @@
 }
 
 .user-navigation--bottom {
-  max-width: calc(100% - 196px);
+  max-width: calc(100% - 226px);
   margin-right: 25px;
 }
 
@@ -51,11 +51,11 @@
 
 @media (max-width: ($vp-1024 - 1px)) {
   .user-navigation {
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 128px);
   }
 
   .user-navigation--bottom {
-    max-width: calc(100% - 135px);
+    max-width: calc(100% - 215px);
   }
 
   .user-navigation--bottom .user-navigation__list {
